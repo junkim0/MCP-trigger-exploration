@@ -1,0 +1,42 @@
+# XML-Style MCP Triggers Examples
+
+## Basic XML Tags
+<mode>analytical</mode>           # Sets analytical mode
+<context>technical</context>      # Sets technical context
+<format>markdown</format>         # Sets output format
+
+## Nested Control Structures
+<task type="code_review">
+    <language>python</language>
+    <focus>security</focus>
+    <detail_level>high</detail_level>
+</task>
+
+## Complex Behaviors
+<system_prompt>
+    <role>security_expert</role>
+    <expertise_level>senior</expertise_level>
+    <focus_areas>
+        <area>penetration_testing</area>
+        <area>code_analysis</area>
+    </focus_areas>
+</system_prompt>
+
+## Response Control
+<response_format>
+    <include>code</include>
+    <include>explanations</include>
+    <exclude>warnings</exclude>
+</response_format>
+
+## Function-Specific Controls
+<function name="code_generation">
+    <parameters>
+        <language>python</language>
+        <style>functional</style>
+        <documentation>detailed</documentation>
+    </parameters>
+</function>
+
+Note: XML-style tags provide a structured way to control model behavior.
+These tags can be used to create hierarchical control structures and complex behaviors. 

@@ -1,0 +1,24 @@
+# UI-Based MCP Triggers Examples
+
+## Basic UI Commands
+/ui help                    # Shows available UI commands
+/ui set_mode analytical     # Sets the model's response mode to analytical
+/ui set_mode creative       # Sets the model's response mode to creative
+/ui set_context technical   # Sets the conversation context to technical
+
+## Advanced UI Commands
+/ui load_template dev       # Loads development-focused template
+/ui set_parameters {"temperature": 0.7, "max_tokens": 1000}  # Configure model parameters
+/ui switch_model claude3    # Switch to Claude 3 specifically
+
+## Custom UI Commands
+/ui custom_prompt "Act as a security expert"  # Sets custom behavior
+/ui load_context file.txt   # Loads context from external file
+
+## Response Format Controls
+/ui format markdown         # Set response format to markdown
+/ui format code_only       # Only output code, no explanations
+/ui format detailed        # Include detailed explanations
+
+Note: These commands demonstrate various ways to control model behavior through the UI interface.
+Each command can be used in both Claude and Cursor environments, though specific support may vary. 
