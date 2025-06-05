@@ -3,9 +3,85 @@ XML-style MCP trigger example showing structured control using XML-like tags
 """
 from mcp.server.fastmcp import FastMCP
 from typing import Dict, List
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+from typing import Optional
+import xml.etree.ElementTree as ET
+import uvicorn
 
 # Create MCP server
 mcp = FastMCP("XML Triggers Demo")
+
+app = FastAPI()
+
+class XMLTrigger(BaseModel):
+    xml_content: str
+    validate: Optional[bool] = True
+
+@app.post("/xml-trigger")
+async def trigger_xml_mcp(trigger: XMLTrigger):
+    """
+    Trigger MCP using XML formatted input
+    """
+    try:
+        # Parse and validate XML
+        root = ET.fromstring(trigger.xml_content)
+        if trigger.validate:
+            validate_mcp_xml(root)
+        
+        # Process the XML trigger
+        result = process_xml_trigger(root)
+        return {"status": "success", "result": result}
+    except ET.ParseError as e:
+        raise HTTPException(status_code=400, detail=f"Invalid XML: {str(e)}")
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+def validate_mcp_xml(root: ET.Element):
+    """
+    Validate MCP XML structure
+    """
+    required_elements = ["command", "context"]
+    for elem in required_elements:
+        if root.find(elem) is None:
+            raise ValueError(f"Missing required element: {elem}")
+
+def process_xml_trigger(root: ET.Element) -> dict:
+    """
+    Process XML-based MCP trigger
+    """
+    command = root.find("command").text
+    context = root.find("context").text
+    priority = root.find("priority").text if root.find("priority") is not None else "0"
+    
+    # Example XML processing logic
+    return {
+        "command": command,
+        "context": context,
+        "priority": int(priority),
+        "metadata": {
+            "trigger_type": "xml",
+            "schema_version": "1.0"
+        }
+    }
+
+@app.get("/xml-schema")
+async def get_xml_schema():
+    """
+    Return the XML schema for MCP triggers
+    """
+    return {
+        "schema": """
+        <mcp-trigger>
+            <command>string</command>
+            <context>string</context>
+            <priority>integer</priority>
+            <metadata>
+                <key>value</key>
+            </metadata>
+        </mcp-trigger>
+        """
+    }
 
 @mcp.tool()
 def code_review(params: Dict[str, str]) -> str:
@@ -52,4 +128,5 @@ def response_format(includes: List[str], excludes: List[str]) -> str:
 if __name__ == "__main__":
     # Configure server settings
     mcp.settings.port = 8081
-    mcp.run(transport="sse") 
+    mcp.run(transport="sse")
+    uvicorn.run(app, host="0.0.0.0", port=8081) 

@@ -1,36 +1,59 @@
 """
 UI-based MCP trigger example showing different ways to invoke specific MCPs
 """
-from mcp.server.fastmcp import FastMCP
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+from typing import Optional, Dict, Any
+import uvicorn
 
-# Create MCP server
-mcp = FastMCP("UI Triggers Demo")
+app = FastAPI()
 
-@mcp.tool()
-def analyze_code(code: str, mode: str = "security") -> str:
-    """
-    Analyze code with specific mode.
-    Demonstrates UI command trigger: /ui set_mode security
-    """
-    return f"Analyzing code in {mode} mode: {code}"
+class MCPTrigger(BaseModel):
+    command: str
+    context: Optional[Dict[str, Any]] = None
+    priority: Optional[int] = 0
 
-@mcp.tool()
-def process_data(data: str, context: str = "technical") -> str:
+@app.post("/trigger")
+async def trigger_mcp(trigger: MCPTrigger):
     """
-    Process data with specific context.
-    Demonstrates UI command trigger: /ui set_context technical
+    Trigger an MCP command through the UI interface
     """
-    return f"Processing data in {context} context: {data}"
+    try:
+        # Process the command based on UI input
+        result = process_command(trigger.command, trigger.context, trigger.priority)
+        return {"status": "success", "result": result}
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
 
-@mcp.tool()
-def format_response(text: str, format: str = "markdown") -> str:
+def process_command(command: str, context: Optional[Dict[str, Any]], priority: int) -> Dict[str, Any]:
     """
-    Format response in specific style.
-    Demonstrates UI command trigger: /ui format markdown
+    Process the MCP command with given context and priority
     """
-    return f"Formatting response in {format}: {text}"
+    # Example command processing logic
+    if command.startswith("/"):
+        # Handle special commands
+        return handle_special_command(command[1:], context)
+    else:
+        # Handle regular MCP triggers
+        return {
+            "command_processed": command,
+            "context_applied": context,
+            "priority_level": priority
+        }
+
+def handle_special_command(cmd: str, context: Optional[Dict[str, Any]]) -> Dict[str, Any]:
+    """
+    Handle special UI commands starting with /
+    """
+    commands = {
+        "help": lambda: {"available_commands": ["/help", "/status", "/clear"]},
+        "status": lambda: {"system_status": "operational"},
+        "clear": lambda: {"cleared": True}
+    }
+    
+    if cmd in commands:
+        return commands[cmd]()
+    raise ValueError(f"Unknown special command: /{cmd}")
 
 if __name__ == "__main__":
-    # Configure server settings
-    mcp.settings.port = 8080
-    mcp.run(transport="sse")  # Using SSE transport for UI interaction 
+    uvicorn.run(app, host="0.0.0.0", port=8080) 
