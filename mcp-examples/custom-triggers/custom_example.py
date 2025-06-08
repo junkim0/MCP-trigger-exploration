@@ -4,10 +4,161 @@ Custom MCP trigger example showing how to create prioritized MCP triggers
 from mcp.server.fastmcp import FastMCP
 from typing import Any, Dict, Optional
 import logging
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+from enum import Enum
+import uvicorn
+from datetime import datetime
+import asyncio
+from dataclasses import dataclass
+from abc import ABC, abstractmethod
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+app = FastAPI()
+
+class TriggerPriority(Enum):
+    LOW = 0
+    MEDIUM = 1
+    HIGH = 2
+    CRITICAL = 3
+
+class TriggerType(Enum):
+    COMMAND = "command"
+    EVENT = "event"
+    SCHEDULED = "scheduled"
+    CONDITIONAL = "conditional"
+
+@dataclass
+class TriggerContext:
+    timestamp: datetime
+    priority: TriggerPriority
+    type: TriggerType
+    metadata: Dict[str, Any]
+
+class TriggerHandler(ABC):
+    @abstractmethod
+    async def handle(self, context: TriggerContext, data: Any) -> Dict[str, Any]:
+        pass
+
+    @abstractmethod
+    def can_handle(self, trigger_type: TriggerType) -> bool:
+        pass
+
+class CommandTriggerHandler(TriggerHandler):
+    async def handle(self, context: TriggerContext, data: Any) -> Dict[str, Any]:
+        return {
+            "type": "command_response",
+            "command": data,
+            "timestamp": context.timestamp,
+            "priority": context.priority.name
+        }
+
+    def can_handle(self, trigger_type: TriggerType) -> bool:
+        return trigger_type == TriggerType.COMMAND
+
+class EventTriggerHandler(TriggerHandler):
+    async def handle(self, context: TriggerContext, data: Any) -> Dict[str, Any]:
+        return {
+            "type": "event_processed",
+            "event_data": data,
+            "timestamp": context.timestamp,
+            "priority": context.priority.name
+        }
+
+    def can_handle(self, trigger_type: TriggerType) -> bool:
+        return trigger_type == TriggerType.EVENT
+
+class ScheduledTriggerHandler(TriggerHandler):
+    async def handle(self, context: TriggerContext, data: Any) -> Dict[str, Any]:
+        return {
+            "type": "scheduled_task",
+            "task_data": data,
+            "timestamp": context.timestamp,
+            "priority": context.priority.name
+        }
+
+    def can_handle(self, trigger_type: TriggerType) -> bool:
+        return trigger_type == TriggerType.SCHEDULED
+
+class ConditionalTriggerHandler(TriggerHandler):
+    async def handle(self, context: TriggerContext, data: Any) -> Dict[str, Any]:
+        condition_met = await self.evaluate_condition(data)
+        return {
+            "type": "conditional_trigger",
+            "condition_met": condition_met,
+            "data": data,
+            "timestamp": context.timestamp,
+            "priority": context.priority.name
+        }
+
+    async def evaluate_condition(self, data: Any) -> bool:
+        # Example condition evaluation
+        if isinstance(data, dict):
+            return data.get("condition", False)
+        return False
+
+    def can_handle(self, trigger_type: TriggerType) -> bool:
+        return trigger_type == TriggerType.CONDITIONAL
+
+class TriggerManager:
+    def __init__(self):
+        self.handlers: List[TriggerHandler] = [
+            CommandTriggerHandler(),
+            EventTriggerHandler(),
+            ScheduledTriggerHandler(),
+            ConditionalTriggerHandler()
+        ]
+
+    async def process_trigger(
+        self,
+        trigger_type: TriggerType,
+        priority: TriggerPriority,
+        data: Any,
+        metadata: Optional[Dict[str, Any]] = None
+    ) -> Dict[str, Any]:
+        context = TriggerContext(
+            timestamp=datetime.utcnow(),
+            priority=priority,
+            type=trigger_type,
+            metadata=metadata or {}
+        )
+
+        for handler in self.handlers:
+            if handler.can_handle(trigger_type):
+                return await handler.handle(context, data)
+
+        raise HTTPException(
+            status_code=400,
+            detail=f"No handler found for trigger type: {trigger_type}"
+        )
+
+# Initialize trigger manager
+trigger_manager = TriggerManager()
+
+class TriggerRequest(BaseModel):
+    type: TriggerType
+    priority: TriggerPriority
+    data: Dict[str, Any]
+    metadata: Optional[Dict[str, Any]] = None
+
+@app.post("/trigger")
+async def handle_trigger(request: TriggerRequest):
+    return await trigger_manager.process_trigger(
+        request.type,
+        request.priority,
+        request.data,
+        request.metadata
+    )
+
+@app.get("/trigger/types")
+async def get_trigger_types():
+    return {
+        "types": [t.value for t in TriggerType],
+        "priorities": [p.name for p in TriggerPriority]
+    }
 
 class PrioritizedMCP(FastMCP):
     def __init__(self, name: str):
@@ -85,4 +236,5 @@ def handle_vulnerability_scan(code: str) -> str:
 if __name__ == "__main__":
     # Configure server settings
     mcp.settings.port = 8083
-    mcp.run(transport="sse") 
+    mcp.run(transport="sse")
+    uvicorn.run(app, host="0.0.0.0", port=8083) 
