@@ -1,34 +1,39 @@
-# MCP Trigger Exploration
+# MCP Selection Optimization
 
-This repository contains examples and implementations of different Model Context Protocol (MCP) trigger methods for Claude and Cursor integration.
+This repository focuses on optimizing Claude's MCP (Model Context Protocol) selection behavior. The goal is to develop and test methods that make Claude consistently choose specific MCPs when given prompts.
+
+## Project Goals
+
+1. Research and document how Claude evaluates and selects MCPs
+2. Develop methods to increase selection probability of specific MCPs
+3. Create testing frameworks to measure selection consistency
 
 ## Project Structure
 
 ```
-mcp-examples/
-├── ui-triggers/      # UI-based command-line style triggers
-├── xml-triggers/     # XML-style structured triggers
-├── function-triggers/# Python decorator-based triggers
-├── custom-triggers/  # Specialized priority-based triggers
-├── implementations/  # Working implementations with demos
-└── tutorial/         # Step-by-step tutorial with examples
-
-examples/            # Additional example code
+mcp-selection/
+├── research/           # Research on Claude's MCP selection behavior
+├── optimization/       # Methods to optimize MCP selection
+├── testing/           # Testing framework for selection consistency
+└── docs/              # Documentation and findings
 ```
 
-## Trigger Types
+## Components
 
-### UI Triggers (Port 8080)
-Command-line style interface for triggering MCPs through UI interactions.
+### 1. MCP Selection Research
+- Analysis of Claude's MCP selection criteria
+- Documentation of selection patterns
+- Identification of key factors in selection
 
-### XML Triggers (Port 8081)
-Structured XML-based approach for defining and triggering MCPs.
+### 2. Selection Optimization
+- Methods to increase MCP selection probability
+- Trigger pattern optimization
+- Context enhancement techniques
 
-### Function Triggers (Port 8082)
-Python decorator-based system for seamless MCP integration.
-
-### Custom Triggers (Port 8083)
-Priority-based custom trigger system with specialized handlers.
+### 3. Testing Framework
+- Tools to measure selection consistency
+- A/B testing capabilities
+- Selection pattern analysis
 
 ## Getting Started
 
@@ -37,17 +42,13 @@ Priority-based custom trigger system with specialized handlers.
 pip install -r requirements.txt
 ```
 
-2. Run examples:
+2. Run selection tests:
 ```bash
-python -m mcp_examples.implementations.test_triggers
+python -m mcp_selection.testing.run_tests
 ```
 
-3. Check results in `implementations/RESULTS.md`
+3. View results in the testing dashboard
 
 ## Documentation
 
-Detailed documentation for each trigger type and implementation details can be found in the respective directories.
-
-## Tutorial
-
-Follow the tutorial in `tutorial/MCP_Tutorial.md` for a step-by-step guide with practical examples. 
+Detailed documentation for each component can be found in the `docs/` directory. 
