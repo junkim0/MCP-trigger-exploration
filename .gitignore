@@ -1,3 +1,4 @@
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
@@ -18,12 +19,29 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-.env
-.venv
-env/
+
+# Virtual Environment
 venv/
+env/
 ENV/
+
+# IDE
 .idea/
 .vscode/
 *.swp
-.DS_Store 
+*.swo
+
+# Logs
+*.log
+
+# Local development
+.env
+.env.local
+.env.*.local
+
+# Test results
+mcp-selection/testing/results/*.json
+
+# System Files
+.DS_Store
+Thumbs.db 
