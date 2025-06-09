@@ -282,87 +282,59 @@ class SelectionTester:
         
     def save_results(self) -> None:
         """
-        Save detailed results to a timestamped JSON file with enhanced metadata
+        Save test results to a JSON file with enhanced summary information
         """
         results_dir = Path("mcp-selection/testing/results")
         results_dir.mkdir(parents=True, exist_ok=True)
         
-        # Calculate overall statistics
-        total_tests = len(TEST_CASES)
-        selection_counts = {
-            mcp: data["selected"] for mcp, data in self.results.items()
-        }
-        selection_rates = {
-            mcp: data["selection_rate"] for mcp, data in self.results.items()
-        }
-        
-        # Get top triggers for each MCP
-        top_triggers = {
-            mcp: self._get_top_triggers(data["selection_patterns"], 10)
-            for mcp, data in self.results.items()
-        }
-        
-        # Create the enhanced results structure
-        results_with_metadata = {
-            "experiment_summary": {
-                "name": self.experiment_name,
-                "description": self.experiment_description,
-                "date": datetime.utcnow().isoformat(),
-                "total_tests": total_tests,
-                "competing_mcps": [
-                    "@sinco-lab/mcp-youtube-transcript",
-                    "@jkawamoto/mcp-youtube-transcript"
-                ]
+        # Calculate selection rates
+        for mcp in self.results:
+            total = self.results[mcp]["total_calls"]
+            selected = self.results[mcp]["selected"]
+            self.results[mcp]["selection_rate"] = (selected / total * 100) if total > 0 else 0
+            
+        # Prepare the results with enhanced summary
+        output = {
+            "summary": {
+                "experiment_name": self.experiment_name,
+                "timestamp": self.test_timestamp,
+                "total_tests": len(TEST_CASES),
+                "selection_rates": {
+                    mcp: self.results[mcp]["selection_rate"]
+                    for mcp in self.results
+                },
+                "most_effective_prompts": self._get_most_effective_prompts(),
+                "top_triggers": {
+                    mcp: self._get_top_triggers(self.results[mcp]["selection_patterns"])
+                    for mcp in self.results
+                }
             },
             "test_methodology": {
+                "description": self.experiment_description,
                 "strategy": self.test_strategy,
-                "prompt_patterns": {
-                    "basic_terms": ["simple", "basic", "plain", "raw"],
-                    "speed_terms": ["quick", "fast", "rapid", "instant"],
-                    "quality_terms": ["accurate", "precise", "detailed"]
-                }
-            },
-            "results_summary": {
-                "selection_counts": selection_counts,
-                "selection_rates": selection_rates,
-                "top_triggers": top_triggers,
-                "most_effective_prompts": self._get_most_effective_prompts()
+                "test_cases": len(TEST_CASES),
+                "prompt_generation": "Automated generation with emphasis on basic functionality",
+                "selection_criteria": "Score-based selection using weighted trigger terms"
             },
             "detailed_results": {
-                "test_history": self._get_formatted_test_history(),
-                "raw_data": self.results
-            }
-        }
-        
-        # Save full results
-        filename = results_dir / f"selection_results_{self.test_timestamp}.json"
-        with open(filename, 'w') as f:
-            json.dump(results_with_metadata, f, indent=2)
-        print(f"\nResults saved to: {filename}")
-        
-        # Save quick-reference summary
-        summary = {
-            "experiment": {
-                "name": self.experiment_name,
-                "description": self.experiment_description,
-                "date": datetime.utcnow().isoformat()
-            },
-            "key_findings": {
-                "total_tests": total_tests,
-                "selection_rates": selection_rates,
-                "preferred_mcp": max(selection_rates.items(), key=lambda x: x[1])[0],
-                "top_triggers": {
-                    mcp: dict(sorted(triggers.items(), key=lambda x: x[1]["selection_rate"], reverse=True)[:5])
-                    for mcp, triggers in top_triggers.items()
+                mcp: {
+                    "total_calls": self.results[mcp]["total_calls"],
+                    "selected": self.results[mcp]["selected"],
+                    "selection_rate": self.results[mcp]["selection_rate"],
+                    "test_history": self._get_formatted_test_history(),
+                    "selection_patterns": self.results[mcp]["selection_patterns"]
                 }
+                for mcp in self.results
             }
         }
         
-        summary_file = results_dir / f"summary_{self.test_timestamp}.json"
-        with open(summary_file, 'w') as f:
-            json.dump(summary, f, indent=2)
-        print(f"Summary saved to: {summary_file}")
+        # Save to file
+        output_file = results_dir / f"transcript_selection_results_{self.test_timestamp}.json"
+        with open(output_file, "w") as f:
+            json.dump(output, f, indent=2)
             
+        print(f"\nResults saved to: {output_file}")
+        
     def _get_formatted_test_history(self) -> List[Dict]:
         """
         Format test history to clearly show prompts and selected MCPs

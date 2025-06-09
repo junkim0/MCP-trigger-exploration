@@ -17,6 +17,26 @@ These MCPs provide an ideal test case as they:
 - Have different implementation characteristics
 - Allow us to measure and influence Claude's selection preferences
 
+## Key Findings
+
+Our research has revealed several important patterns in Claude's MCP selection behavior:
+
+### Selection Triggers
+- @sinco-lab/mcp-youtube-transcript is favored by:
+  - Language-related terms (e.g., "transcript", "language detection")
+  - Advanced feature requests (e.g., "metadata", "formatting")
+  - Quality indicators (e.g., "accurate", "detailed")
+  
+- @jkawamoto/mcp-youtube-transcript is favored by:
+  - Basic functionality terms (e.g., "simple", "basic", "plain")
+  - Speed indicators (e.g., "quick", "fast", "rapid")
+  - Simplicity emphasis (e.g., "nothing fancy", "keep it simple")
+
+### Selection Rates
+- Initial testing showed @sinco-lab at 73% vs @jkawamoto at 27%
+- After optimizing for basic functionality, @jkawamoto achieved 100% selection rate
+- Most effective prompts combine "simple", "basic", "quick", and "nothing fancy"
+
 ## Repository Structure
 
 ```
@@ -27,24 +47,22 @@ mcp-selection/
 └── docs/             # Documentation and findings
 ```
 
-## Key Features
+## Testing Framework
 
-### Selection Testing Framework
-- Automated testing of MCP selection patterns
-- Detailed prompt analysis and scoring
-- Comprehensive results tracking
-- Selection rate optimization
+Our testing framework includes:
 
-### Implementation Comparison
-- Feature-rich vs. basic implementations
-- Selection trigger analysis
-- Effectiveness measurement
+1. Automated test generation with varied prompts
+2. Detailed selection pattern analysis
+3. Comprehensive results tracking in JSON format
+4. Selection rate optimization through prompt engineering
 
-### Results Analysis
-- Detailed test results in JSON format
-- Selection pattern visualization
-- Trigger word effectiveness tracking
-- Historical test comparison
+### Results Format
+Each test result JSON file includes:
+- Summary of results (selection rates, patterns)
+- Test methodology description
+- Experiment parameters
+- Detailed prompt analysis
+- Selection triggers and their effectiveness
 
 ## Getting Started
 
@@ -59,14 +77,6 @@ python mcp-selection/testing/transcript_selection_test.py
 ```
 
 3. View results in `mcp-selection/testing/results/`
-
-## Key Findings
-
-Our research has shown that Claude's MCP selection can be influenced through:
-1. Specific prompt wording and terminology
-2. Feature emphasis or de-emphasis
-3. Implementation complexity signals
-4. Context clarity and specificity
 
 ## Contributing
 
