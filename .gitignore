@@ -39,9 +39,6 @@ ENV/
 .env.local
 .env.*.local
 
-# Test results
-mcp-selection/testing/results/*.json
-
 # System Files
 .DS_Store
 Thumbs.db 

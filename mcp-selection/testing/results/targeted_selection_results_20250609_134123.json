@@ -1,0 +1,1863 @@
+{
+  "summary": {
+    "experiment_name": "Targeted MCP Selection Test",
+    "timestamp": "20250609_134123",
+    "total_tests": 300,
+    "selection_rates": {
+      "random": {
+        "sinco_rate": 0.31,
+        "jkawamoto_rate": 0.69
+      },
+      "sinco_favored": {
+        "sinco_rate": 1.0,
+        "jkawamoto_rate": 0.0
+      },
+      "jkawamoto_favored": {
+        "sinco_rate": 0.08,
+        "jkawamoto_rate": 0.92
+      }
+    }
+  },
+  "test_methodology": {
+    "description": "Testing MCP selection behavior with different prompt types",
+    "strategy": "Compare selection rates between random, sinco-favored, and jkawamoto-favored prompts",
+    "test_cases": {
+      "random": 100,
+      "sinco_favored": 100,
+      "jkawamoto_favored": 100
+    }
+  },
+  "detailed_results": {
+    "test_history": [
+      {
+        "prompt": "Get the transcript for dQw4w9WgXcQ",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "What's in the captions of OPf0YbXqDm0?",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract text from dQw4w9WgXcQ",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for 9bZkp7q19f0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract text from kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the words from jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "What's in the captions of jNQXAC9IVRw?",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "What's in the captions of jNQXAC9IVRw?",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for kJQP7kiw5Fk",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the words from OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for OPf0YbXqDm0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for dQw4w9WgXcQ",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for jNQXAC9IVRw",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the words from 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for 9bZkp7q19f0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the subtitles from 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract text from OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract text from jNQXAC9IVRw",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract text from 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract text from jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "What's in the captions of 9bZkp7q19f0?",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "What's in the captions of kJQP7kiw5Fk?",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract text from dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the subtitles from kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "What's in the captions of 9bZkp7q19f0?",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the subtitles from dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the subtitles from dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for dQw4w9WgXcQ",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the subtitles from kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract text from dQw4w9WgXcQ",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the words from OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the words from dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the words from jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the words from jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for 9bZkp7q19f0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "What's in the captions of dQw4w9WgXcQ?",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for OPf0YbXqDm0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "What's in the captions of OPf0YbXqDm0?",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for 9bZkp7q19f0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the subtitles from 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the subtitles from dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the subtitles from OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the words from kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the words from kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the subtitles from dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "What's in the captions of dQw4w9WgXcQ?",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for dQw4w9WgXcQ",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract text from dQw4w9WgXcQ",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract text from jNQXAC9IVRw",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the subtitles from dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "What's in the captions of jNQXAC9IVRw?",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for 9bZkp7q19f0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract text from 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the words from 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "What's in the captions of OPf0YbXqDm0?",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "What's in the captions of jNQXAC9IVRw?",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract text from dQw4w9WgXcQ",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract text from 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract text from OPf0YbXqDm0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for dQw4w9WgXcQ",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the words from jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for jNQXAC9IVRw",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the subtitles from jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for 9bZkp7q19f0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract text from jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the words from dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the words from kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the words from OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract text from jNQXAC9IVRw",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the words from dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for OPf0YbXqDm0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the subtitles from OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract text from kJQP7kiw5Fk",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract text from jNQXAC9IVRw",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the subtitles from jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the subtitles from dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the subtitles from kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "What's in the captions of dQw4w9WgXcQ?",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the words from 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the subtitles from dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "What's in the captions of 9bZkp7q19f0?",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the words from jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract text from jNQXAC9IVRw",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract text from OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract text from 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the subtitles from dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "What's in the captions of OPf0YbXqDm0?",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the subtitles from OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the subtitles from jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the words from dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the words from jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "What's in the captions of kJQP7kiw5Fk?",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract text from kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the words from jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract text from OPf0YbXqDm0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "What's in the captions of 9bZkp7q19f0?",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for kJQP7kiw5Fk",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract text from kJQP7kiw5Fk",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the words from jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the words from jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript with timestamps from kJQP7kiw5Fk",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript with timestamps from OPf0YbXqDm0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript from OPf0YbXqDm0 with metadata",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for jNQXAC9IVRw with language detection",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript with timestamps from kJQP7kiw5Fk",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript with speaker detection from jNQXAC9IVRw",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the Portuguese transcript from OPf0YbXqDm0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript from jNQXAC9IVRw with metadata",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript with timestamps from dQw4w9WgXcQ",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for kJQP7kiw5Fk with language detection",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript from dQw4w9WgXcQ with metadata",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript with speaker detection from kJQP7kiw5Fk",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript with timestamps from jNQXAC9IVRw",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the German transcript from jNQXAC9IVRw",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript with speaker detection from dQw4w9WgXcQ",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript from OPf0YbXqDm0 with metadata",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript with timestamps from jNQXAC9IVRw",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the English transcript from OPf0YbXqDm0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript with timestamps from 9bZkp7q19f0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the English transcript from jNQXAC9IVRw",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript with timestamps from 9bZkp7q19f0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the Spanish transcript from OPf0YbXqDm0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the Italian transcript from 9bZkp7q19f0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript with timestamps from dQw4w9WgXcQ",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for kJQP7kiw5Fk with language detection",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the German transcript from dQw4w9WgXcQ",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript from jNQXAC9IVRw with metadata",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for dQw4w9WgXcQ with language detection",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for OPf0YbXqDm0 with language detection",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for kJQP7kiw5Fk with language detection",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript with speaker detection from kJQP7kiw5Fk",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the French transcript from kJQP7kiw5Fk",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript from jNQXAC9IVRw with metadata",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript with timestamps from OPf0YbXqDm0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript with speaker detection from kJQP7kiw5Fk",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript with speaker detection from 9bZkp7q19f0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for 9bZkp7q19f0 with language detection",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the English transcript from kJQP7kiw5Fk",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript from jNQXAC9IVRw with metadata",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the Italian transcript from OPf0YbXqDm0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript from jNQXAC9IVRw with metadata",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript with timestamps from jNQXAC9IVRw",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for jNQXAC9IVRw with language detection",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript with timestamps from 9bZkp7q19f0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript with timestamps from kJQP7kiw5Fk",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for 9bZkp7q19f0 with language detection",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for 9bZkp7q19f0 with language detection",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript with speaker detection from jNQXAC9IVRw",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the Portuguese transcript from jNQXAC9IVRw",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for dQw4w9WgXcQ with language detection",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for OPf0YbXqDm0 with language detection",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript from kJQP7kiw5Fk with metadata",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the Spanish transcript from kJQP7kiw5Fk",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript with timestamps from dQw4w9WgXcQ",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for OPf0YbXqDm0 with language detection",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript with speaker detection from 9bZkp7q19f0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the Italian transcript from jNQXAC9IVRw",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript with speaker detection from jNQXAC9IVRw",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript with timestamps from jNQXAC9IVRw",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript with timestamps from OPf0YbXqDm0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for 9bZkp7q19f0 with language detection",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript from OPf0YbXqDm0 with metadata",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript from OPf0YbXqDm0 with metadata",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the Portuguese transcript from 9bZkp7q19f0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the English transcript from 9bZkp7q19f0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for kJQP7kiw5Fk with language detection",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the Portuguese transcript from 9bZkp7q19f0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for dQw4w9WgXcQ with language detection",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript from OPf0YbXqDm0 with metadata",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the French transcript from dQw4w9WgXcQ",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for jNQXAC9IVRw with language detection",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript from 9bZkp7q19f0 with metadata",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript from OPf0YbXqDm0 with metadata",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for kJQP7kiw5Fk with language detection",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript from dQw4w9WgXcQ with metadata",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript from dQw4w9WgXcQ with metadata",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript from dQw4w9WgXcQ with metadata",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript from dQw4w9WgXcQ with metadata",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the Spanish transcript from 9bZkp7q19f0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript from dQw4w9WgXcQ with metadata",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript with timestamps from 9bZkp7q19f0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for OPf0YbXqDm0 with language detection",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for dQw4w9WgXcQ with language detection",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for kJQP7kiw5Fk with language detection",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the French transcript from OPf0YbXqDm0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript from 9bZkp7q19f0 with metadata",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the English transcript from jNQXAC9IVRw",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for kJQP7kiw5Fk with language detection",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for dQw4w9WgXcQ with language detection",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript with timestamps from OPf0YbXqDm0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript from 9bZkp7q19f0 with metadata",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Extract transcript with speaker detection from OPf0YbXqDm0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for jNQXAC9IVRw with language detection",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the French transcript from kJQP7kiw5Fk",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the French transcript from OPf0YbXqDm0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the Spanish transcript from OPf0YbXqDm0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Show me the English transcript from dQw4w9WgXcQ",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript for 9bZkp7q19f0 with language detection",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript with timestamps from jNQXAC9IVRw",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the transcript with timestamps from jNQXAC9IVRw",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T13:41:23.854639"
+      },
+      {
+        "prompt": "Get the subtitles from dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the subtitles from OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me the captions of kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me what's said in kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the subtitles from 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the subtitles from 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me the captions of OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the words from jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the subtitles from kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the subtitles from jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the subtitles from kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me the captions of dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the words from OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me what's said in jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the subtitles from kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Extract the text from kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me what's said in OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the subtitles from kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me what's said in 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the words from OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me the captions of kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Extract the text from OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Extract the text from dQw4w9WgXcQ",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Extract the text from dQw4w9WgXcQ",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the words from dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the subtitles from OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Extract the text from dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the words from 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Extract the text from OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the subtitles from 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the words from jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the words from dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the subtitles from 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the words from jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the subtitles from 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me the captions of jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Extract the text from OPf0YbXqDm0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me the captions of OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me what's said in dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the words from 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me the captions of jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the words from jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me the captions of jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the subtitles from OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me the captions of jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the words from OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Extract the text from jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Extract the text from jNQXAC9IVRw",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me what's said in OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Extract the text from dQw4w9WgXcQ",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the words from jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me what's said in jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the subtitles from 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me what's said in dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the subtitles from jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me what's said in 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the words from dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me what's said in OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me what's said in jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the words from OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me the captions of kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me the captions of 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the subtitles from 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the words from kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me what's said in 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me what's said in 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me the captions of 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me the captions of kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me what's said in kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me what's said in OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me the captions of jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me the captions of 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me what's said in OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the words from kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the subtitles from dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the words from kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me what's said in OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Extract the text from OPf0YbXqDm0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me what's said in OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the subtitles from kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the words from jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me the captions of 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the words from 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Extract the text from dQw4w9WgXcQ",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the words from kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Extract the text from dQw4w9WgXcQ",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the words from dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me the captions of kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me what's said in kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the subtitles from kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Extract the text from jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the words from OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the words from 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me what's said in 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me the captions of 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the words from dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the words from 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me the captions of 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Show me what's said in OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      },
+      {
+        "prompt": "Get the words from kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T13:41:23.855768"
+      }
+    ],
+    "selection_patterns": {
+      "random": {
+        "total_calls": 100,
+        "sinco_selected": 31,
+        "jkawamoto_selected": 69,
+        "selection_rate": {
+          "sinco": 0.31,
+          "jkawamoto": 0.69
+        }
+      },
+      "sinco_favored": {
+        "total_calls": 100,
+        "sinco_selected": 100,
+        "jkawamoto_selected": 0,
+        "selection_rate": {
+          "sinco": 1.0,
+          "jkawamoto": 0.0
+        }
+      },
+      "jkawamoto_favored": {
+        "total_calls": 100,
+        "sinco_selected": 8,
+        "jkawamoto_selected": 92,
+        "selection_rate": {
+          "sinco": 0.08,
+          "jkawamoto": 0.92
+        }
+      }
+    }
+  }
+}

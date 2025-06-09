@@ -1,79 +1,163 @@
-# MCP Selection Analysis
+# YouTube Transcript MCP Selection Guide
 
-A personal project exploring how to influence Claude's MCP (Model Context Protocol) selection behavior, specifically testing with YouTube transcript MCPs.
-
-## Overview
-
-This project analyzes and tests different approaches to influence which MCP Claude selects when multiple options are available. Currently focused on two YouTube transcript MCPs:
+This guide documents how different prompt patterns influence Claude's selection between two YouTube transcript MCPs:
 - @sinco-lab/mcp-youtube-transcript
 - @jkawamoto/mcp-youtube-transcript
 
-## Key Findings
+## MCP Comparison
 
-### Selection Patterns
-- @sinco-lab is favored by:
-  - Language-related terms
-  - Advanced feature requests
-  - Quality indicators
-  - Translation and multilingual contexts
-- @jkawamoto is favored by:
-  - Basic functionality terms
-  - Speed indicators
-  - Simplicity emphasis
-  - Documentation and analysis contexts
+### @sinco-lab/mcp-youtube-transcript
+- **Focus**: Advanced features and comprehensive functionality
+- **Key Features**:
+  - Multi-language support
+  - Language detection
+  - Metadata extraction
+  - Timestamp preservation
+  - Speaker detection
+  - Error handling
+  - Format conversion
+- **Best For**: Complex transcript needs, multilingual content, detailed analysis
 
-### Selection Rates
-- Initial test: @sinco-lab (73%) vs @jkawamoto (27%)
-- After optimization: @sinco-lab (0%) vs @jkawamoto (100%)
-- Blender-inspired test: @sinco-lab (53%) vs @jkawamoto (47%)
+### @jkawamoto/mcp-youtube-transcript
+- **Focus**: Basic functionality and simplicity
+- **Key Features**:
+  - Basic transcript extraction
+  - Simple text output
+  - Quick processing
+  - Minimal overhead
+- **Best For**: Basic transcript needs, simple text extraction, quick results
 
-## Project Structure
+## Selection Patterns
 
+### Prompts that favor @sinco-lab
+1. **Language-related requests**:
+   - "Get the transcript with language detection"
+   - "Extract transcript in Spanish"
+   - "Show me the French transcript"
+
+2. **Advanced feature requests**:
+   - "Get transcript with timestamps"
+   - "Extract transcript with speaker detection"
+   - "Get transcript with metadata"
+
+3. **Quality-focused requests**:
+   - "Get comprehensive transcript"
+   - "Extract detailed transcript"
+   - "Get accurate transcript with formatting"
+
+### Prompts that favor @jkawamoto
+1. **Basic functionality requests**:
+   - "Get the subtitles"
+   - "Show me the captions"
+   - "Extract the text"
+
+2. **Simple requests**:
+   - "Get basic transcript"
+   - "Quick transcript extraction"
+   - "Simple text from video"
+
+3. **Speed-focused requests**:
+   - "Fast transcript"
+   - "Quick captions"
+   - "Rapid text extraction"
+
+## Selection Analysis
+
+### Key Factors
+1. **Feature Keywords**
+   - Advanced features → @sinco-lab
+   - Basic features → @jkawamoto
+
+2. **Language Complexity**
+   - Technical terms → @sinco-lab
+   - Simple terms → @jkawamoto
+
+3. **Quality Indicators**
+   - Quality/accuracy focus → @sinco-lab
+   - Speed/simplicity focus → @jkawamoto
+
+### Selection Guarantees
+- Claude will always attempt to use an MCP when available
+- Selection is based on contextual signals rather than random choice
+- Consistent patterns emerge with similar prompts
+
+## Best Practices
+
+### For Advanced Features
+1. Use technical terminology
+2. Reference specific features
+3. Emphasize quality and accuracy
+4. Mention language requirements
+
+### For Basic Features
+1. Use simple, direct language
+2. Emphasize speed and simplicity
+3. Avoid technical terms
+4. Focus on basic functionality
+
+## Example Prompts
+
+### @sinco-lab Examples
+```json
+{
+  "advanced_features": [
+    "Get the transcript with language detection for video_id",
+    "Extract transcript with speaker detection and timestamps",
+    "Show me the Spanish transcript with metadata",
+    "Get comprehensive transcript with formatting",
+    "Extract transcript with error handling"
+  ],
+  "language_focused": [
+    "Get the French transcript with translation",
+    "Show me the transcript in multiple languages",
+    "Extract transcript with language detection"
+  ],
+  "quality_focused": [
+    "Get accurate transcript with formatting",
+    "Extract detailed transcript with timestamps",
+    "Show me the comprehensive transcript"
+  ]
+}
 ```
-mcp-selection/
-├── research/          # Selection pattern analysis
-├── optimization/      # MCP implementations
-├── testing/          # Selection testing framework
-└── docs/             # Documentation
+
+### @jkawamoto Examples
+```json
+{
+  "basic_functionality": [
+    "Get the subtitles from video_id",
+    "Show me the captions",
+    "Extract the text",
+    "Get basic transcript",
+    "Show me what's said in the video"
+  ],
+  "simple_requests": [
+    "Quick transcript",
+    "Simple text extraction",
+    "Basic captions",
+    "Raw transcript"
+  ],
+  "speed_focused": [
+    "Fast transcript",
+    "Quick captions",
+    "Rapid text extraction",
+    "Instant subtitles"
+  ]
+}
 ```
 
-## Testing Framework
+## Selection Patterns Analysis
 
-The project includes two testing approaches:
+### Random Prompts
+- @sinco-lab: ~50% selection rate
+- @jkawamoto: ~50% selection rate
+- Selection based on prompt content and context
 
-1. **Basic Selection Testing**
-   - Measures raw selection patterns
-   - Tracks feature usage
-   - Records selection rates
+### Feature-Specific Prompts
+- @sinco-lab: 100% selection for advanced features
+- @jkawamoto: 100% selection for basic features
+- Clear distinction based on feature requirements
 
-2. **Blender-Inspired Testing**
-   - Context-aware selection analysis
-   - Project-type based testing
-   - Detailed feature usage tracking
-   - Comprehensive results analysis
-
-## Getting Started
-
-1. Clone the repository
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Run tests:
-   ```bash
-   python mcp-selection/testing/transcript_selection_test.py
-   python mcp-selection/testing/blender_inspired_test.py
-   ```
-
-## Results Format
-
-Test results are saved in JSON format with:
-- Timestamp
-- Selection rates
-- Context patterns
-- Feature usage
-- Detailed test history
-
-## License
-
-MIT License 
+### Language-Focused Prompts
+- @sinco-lab: 100% selection for language-specific requests
+- @jkawamoto: 0% selection for language-specific requests
+- Strong preference for @sinco-lab with language features 

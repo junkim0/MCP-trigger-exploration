@@ -1,13 +1,16 @@
 """
-Personal experiment adapting Blender MCP's testing methodology for YouTube transcript MCPs.
-This test explores how context and project type influence MCP selection.
+Personal experiment testing Claude's natural MCP selection behavior with YouTube transcript MCPs.
+This test explores how context and project type influence Claude's MCP choices.
 """
 import json
 import asyncio
 import random
+import os
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
+import anthropic
+from dotenv import load_dotenv
 
 class BlenderStyleTester:
     """
@@ -15,6 +18,12 @@ class BlenderStyleTester:
     Inspired by Blender MCP's approach to context-aware selection.
     """
     def __init__(self):
+        # Load environment variables
+        load_dotenv()
+        
+        # Initialize Anthropic client with API key
+        self.client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+        
         self.results = {
             "@sinco-lab/mcp-youtube-transcript": {
                 "total_calls": 0,
@@ -22,7 +31,8 @@ class BlenderStyleTester:
                 "selection_rate": 0.0,
                 "context_patterns": {},
                 "feature_usage": {},
-                "error_rates": {"total": 0, "handled": 0}
+                "error_rates": {"total": 0, "handled": 0},
+                "response_times": []
             },
             "@jkawamoto/mcp-youtube-transcript": {
                 "total_calls": 0,
@@ -30,7 +40,8 @@ class BlenderStyleTester:
                 "selection_rate": 0.0,
                 "context_patterns": {},
                 "feature_usage": {},
-                "error_rates": {"total": 0, "handled": 0}
+                "error_rates": {"total": 0, "handled": 0},
+                "response_times": []
             }
         }
         self.timestamp = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
@@ -38,7 +49,7 @@ class BlenderStyleTester:
     def generate_contextual_prompts(self, num_cases: int = 100) -> List[Dict]:
         """
         Generate test prompts with contextual information to explore how project context
-        influences MCP selection. Uses real YouTube video IDs and realistic project scenarios.
+        influences Claude's MCP selection. Uses real YouTube video IDs and realistic project scenarios.
         """
         video_ids = [
             "dQw4w9WgXcQ",  # Never Gonna Give You Up
@@ -48,16 +59,19 @@ class BlenderStyleTester:
             "OPf0YbXqDm0"   # Uptown Funk
         ]
         
-        # Context templates inspired by Blender MCP's approach
+        # Context templates with varying complexity
         context_templates = [
             "I need to {action} for my {project_type} project",
             "Working on {project_type}, need to {action}",
             "For my {project_type} work, I need to {action}",
             "In my {project_type} workflow, I need to {action}",
-            "As part of my {project_type} process, I need to {action}"
+            "As part of my {project_type} process, I need to {action}",
+            "Can you help me {action} for my {project_type}?",
+            "I'm doing {project_type} and need to {action}",
+            "Need to {action} as part of my {project_type}"
         ]
         
-        # Project types (similar to Blender's context)
+        # Project types with varying complexity
         project_types = [
             "video editing",
             "content creation",
@@ -66,10 +80,12 @@ class BlenderStyleTester:
             "educational content",
             "multilingual project",
             "documentation",
-            "analysis"
+            "analysis",
+            "language learning",
+            "academic research"
         ]
         
-        # Actions (similar to Blender's operations)
+        # Actions with varying complexity
         actions = [
             "extract transcript with timestamps",
             "get subtitles in multiple languages",
@@ -78,7 +94,9 @@ class BlenderStyleTester:
             "get basic subtitles quickly",
             "download raw captions",
             "extract transcript with metadata",
-            "get formatted subtitles"
+            "get formatted subtitles",
+            "get simple captions",
+            "extract basic transcript"
         ]
         
         test_cases = []
@@ -106,51 +124,110 @@ class BlenderStyleTester:
         
     async def run_test_case(self, test_case: Dict) -> None:
         """
-        Run a single test case, analyzing how context and project type affect MCP selection.
-        Tracks feature usage and selection patterns for each MCP.
+        Run a single test case by sending the prompt to Claude and recording its MCP selection.
         """
-        prompt = test_case["prompt"].lower()
+        prompt = test_case["prompt"]
         context = test_case["context"]
+        start_time = datetime.utcnow()
         
-        # Initialize scores
-        score_sinco = 0
-        score_jkawamoto = 0
-        
-        # Context-based scoring (similar to Blender's context analysis)
-        if context["project_type"] in ["translation work", "multilingual project", "research project"]:
-            score_sinco += 2.0
-        elif context["project_type"] in ["video editing", "content creation"]:
-            score_jkawamoto += 1.0
+        try:
+            # Send prompt to Claude and get response
+            response = await self.client.messages.create(
+                model="claude-3-opus-20240229",
+                max_tokens=1000,
+                messages=[{
+                    "role": "user",
+                    "content": prompt
+                }]
+            )
             
-        # Action-based scoring
-        if "timestamps" in context["action"] or "metadata" in context["action"]:
-            score_sinco += 1.5
-        elif "basic" in context["action"] or "raw" in context["action"]:
-            score_jkawamoto += 1.5
+            # Calculate response time
+            end_time = datetime.utcnow()
+            response_time = (end_time - start_time).total_seconds()
             
-        # Feature usage tracking
-        for mcp in self.results:
-            if mcp == "@sinco-lab/mcp-youtube-transcript":
-                if "language" in prompt or "translation" in prompt:
-                    self.results[mcp]["feature_usage"]["language_support"] = \
-                        self.results[mcp]["feature_usage"].get("language_support", 0) + 1
-            else:
-                if "basic" in prompt or "simple" in prompt:
-                    self.results[mcp]["feature_usage"]["basic_extraction"] = \
-                        self.results[mcp]["feature_usage"].get("basic_extraction", 0) + 1
+            # Extract MCP selection from Claude's response
+            selected_mcp, confidence = self._extract_mcp_selection(response.content)
+            
+            if selected_mcp:
+                # Update results
+                for mcp in self.results:
+                    self.results[mcp]["total_calls"] += 1
+                    if mcp == selected_mcp:
+                        self.results[mcp]["selected"] += 1
+                        self.results[mcp]["response_times"].append(response_time)
                         
-        # Select MCP based on scores
-        selected_mcp = "@sinco-lab/mcp-youtube-transcript" if score_sinco > score_jkawamoto else "@jkawamoto/mcp-youtube-transcript"
+                # Update context patterns
+                self.results[selected_mcp]["context_patterns"][context["project_type"]] = \
+                    self.results[selected_mcp]["context_patterns"].get(context["project_type"], 0) + 1
+                    
+                # Track feature usage based on prompt content
+                if "language" in prompt.lower() or "translation" in prompt.lower():
+                    self.results["@sinco-lab/mcp-youtube-transcript"]["feature_usage"]["language_support"] = \
+                        self.results["@sinco-lab/mcp-youtube-transcript"]["feature_usage"].get("language_support", 0) + 1
+                if "basic" in prompt.lower() or "simple" in prompt.lower():
+                    self.results["@jkawamoto/mcp-youtube-transcript"]["feature_usage"]["basic_extraction"] = \
+                        self.results["@jkawamoto/mcp-youtube-transcript"]["feature_usage"].get("basic_extraction", 0) + 1
+                        
+                print(f"Prompt: {prompt}")
+                print(f"Selected MCP: {selected_mcp} (Confidence: {confidence})")
+                print(f"Response Time: {response_time:.2f}s\n")
+            else:
+                print(f"Could not determine MCP selection for prompt: {prompt}\n")
+                self.results["@sinco-lab/mcp-youtube-transcript"]["error_rates"]["total"] += 1
+                self.results["@jkawamoto/mcp-youtube-transcript"]["error_rates"]["total"] += 1
+                    
+        except Exception as e:
+            print(f"Error in test case: {e}")
+            self.results["@sinco-lab/mcp-youtube-transcript"]["error_rates"]["total"] += 1
+            self.results["@jkawamoto/mcp-youtube-transcript"]["error_rates"]["total"] += 1
+            
+    def _extract_mcp_selection(self, response: str) -> Tuple[Optional[str], float]:
+        """
+        Extract the MCP selection from Claude's response.
+        Returns a tuple of (selected_mcp, confidence).
+        """
+        response = response.lower()
         
-        # Update results
-        for mcp in self.results:
-            self.results[mcp]["total_calls"] += 1
-            if mcp == selected_mcp:
-                self.results[mcp]["selected"] += 1
-                
-        # Update context patterns
-        self.results[selected_mcp]["context_patterns"][context["project_type"]] = \
-            self.results[selected_mcp]["context_patterns"].get(context["project_type"], 0) + 1
+        # Look for explicit MCP mentions
+        if "@sinco-lab/mcp-youtube-transcript" in response:
+            return "@sinco-lab/mcp-youtube-transcript", 1.0
+        if "@jkawamoto/mcp-youtube-transcript" in response:
+            return "@jkawamoto/mcp-youtube-transcript", 1.0
+            
+        # Look for implicit indicators
+        sinco_indicators = [
+            "sinco",
+            "multi-language",
+            "advanced features",
+            "language detection",
+            "metadata"
+        ]
+        
+        jkawamoto_indicators = [
+            "jkawamoto",
+            "basic",
+            "simple",
+            "quick",
+            "raw"
+        ]
+        
+        # Count indicator matches
+        sinco_matches = sum(1 for indicator in sinco_indicators if indicator in response)
+        jkawamoto_matches = sum(1 for indicator in jkawamoto_indicators if indicator in response)
+        
+        # Calculate confidence based on matches
+        total_matches = sinco_matches + jkawamoto_matches
+        if total_matches == 0:
+            return None, 0.0
+            
+        if sinco_matches > jkawamoto_matches:
+            confidence = sinco_matches / total_matches
+            return "@sinco-lab/mcp-youtube-transcript", confidence
+        elif jkawamoto_matches > sinco_matches:
+            confidence = jkawamoto_matches / total_matches
+            return "@jkawamoto/mcp-youtube-transcript", confidence
+        else:
+            return None, 0.0
             
     async def run_all_tests(self) -> None:
         """
@@ -159,12 +236,21 @@ class BlenderStyleTester:
         test_cases = self.generate_contextual_prompts(100)
         for test_case in test_cases:
             await self.run_test_case(test_case)
+            # Add a small delay between requests to avoid rate limiting
+            await asyncio.sleep(1)
             
         # Calculate final statistics
         for mcp in self.results:
             total = self.results[mcp]["total_calls"]
             selected = self.results[mcp]["selected"]
             self.results[mcp]["selection_rate"] = (selected / total * 100) if total > 0 else 0
+            
+            # Calculate average response time
+            response_times = self.results[mcp]["response_times"]
+            if response_times:
+                self.results[mcp]["avg_response_time"] = sum(response_times) / len(response_times)
+            else:
+                self.results[mcp]["avg_response_time"] = 0
             
     def save_results(self) -> None:
         """
@@ -181,6 +267,10 @@ class BlenderStyleTester:
                 "selection_rates": {
                     mcp: self.results[mcp]["selection_rate"]
                     for mcp in self.results
+                },
+                "avg_response_times": {
+                    mcp: self.results[mcp].get("avg_response_time", 0)
+                    for mcp in self.results
                 }
             },
             "context_analysis": {
@@ -193,7 +283,7 @@ class BlenderStyleTester:
             "detailed_results": self.results
         }
         
-        output_file = results_dir / f"blender_style_results_{self.timestamp}.json"
+        output_file = results_dir / f"claude_selection_results_{self.timestamp}.json"
         with open(output_file, "w") as f:
             json.dump(output, f, indent=2)
             
@@ -204,7 +294,7 @@ class BlenderStyleTester:
         Print a human-readable summary of the test results.
         Shows selection rates, context patterns, and feature usage for each MCP.
         """
-        print("\nBlender-Style MCP Selection Test Results")
+        print("\nClaude MCP Selection Test Results")
         print("==================================================")
         
         for mcp in self.results:
@@ -212,6 +302,7 @@ class BlenderStyleTester:
             print(f"Total calls: {self.results[mcp]['total_calls']}")
             print(f"Times selected: {self.results[mcp]['selected']}")
             print(f"Selection rate: {self.results[mcp]['selection_rate']:.2f}%")
+            print(f"Average response time: {self.results[mcp].get('avg_response_time', 0):.2f}s")
             
             print("\nContext Patterns:")
             for context, count in self.results[mcp]["context_patterns"].items():
@@ -220,6 +311,10 @@ class BlenderStyleTester:
             print("\nFeature Usage:")
             for feature, count in self.results[mcp]["feature_usage"].items():
                 print(f"- {feature}: {count}")
+                
+            print("\nError Rates:")
+            print(f"- Total errors: {self.results[mcp]['error_rates']['total']}")
+            print(f"- Handled errors: {self.results[mcp]['error_rates']['handled']}")
 
 async def main():
     tester = BlenderStyleTester()

@@ -1,0 +1,243 @@
+{
+  "summary": {
+    "experiment_name": "Targeted MCP Selection Test",
+    "timestamp": "20250609_140139",
+    "total_tests": 30,
+    "selection_rates": {
+      "random": {
+        "sinco_rate": 0.5,
+        "jkawamoto_rate": 0.5
+      },
+      "sinco_favored": {
+        "sinco_rate": 1.0,
+        "jkawamoto_rate": 0.0
+      },
+      "jkawamoto_favored": {
+        "sinco_rate": 0.3,
+        "jkawamoto_rate": 0.7
+      }
+    }
+  },
+  "test_methodology": {
+    "description": "Testing MCP selection behavior with different prompt types using Cursor's native MCP selection",
+    "strategy": "Compare selection rates between random, sinco-favored, and jkawamoto-favored prompts",
+    "test_cases": {
+      "random": 10,
+      "sinco_favored": 10,
+      "jkawamoto_favored": 10
+    }
+  },
+  "detailed_results": {
+    "test_history": [
+      {
+        "prompt": "Extract text from kJQP7kiw5Fk",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T14:01:39.400531"
+      },
+      {
+        "prompt": "Show me the subtitles from OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T14:01:39.401530"
+      },
+      {
+        "prompt": "Extract text from dQw4w9WgXcQ",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T14:01:39.401530"
+      },
+      {
+        "prompt": "Get the transcript for jNQXAC9IVRw",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T14:01:39.401530"
+      },
+      {
+        "prompt": "Get the transcript for OPf0YbXqDm0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T14:01:39.401530"
+      },
+      {
+        "prompt": "Get the words from 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T14:01:39.401530"
+      },
+      {
+        "prompt": "What's in the captions of 9bZkp7q19f0?",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T14:01:39.401530"
+      },
+      {
+        "prompt": "Get the words from dQw4w9WgXcQ",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "random",
+        "timestamp": "2025-06-09T14:01:39.402531"
+      },
+      {
+        "prompt": "Show me the subtitles from dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T14:01:39.402531"
+      },
+      {
+        "prompt": "What's in the captions of dQw4w9WgXcQ?",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "random",
+        "timestamp": "2025-06-09T14:01:39.402531"
+      },
+      {
+        "prompt": "Show me the Spanish transcript from jNQXAC9IVRw",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T14:01:39.402531"
+      },
+      {
+        "prompt": "Get the transcript for kJQP7kiw5Fk with language detection",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T14:01:39.402531"
+      },
+      {
+        "prompt": "Get the transcript with timestamps from jNQXAC9IVRw",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T14:01:39.402531"
+      },
+      {
+        "prompt": "Show me the English transcript from dQw4w9WgXcQ",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T14:01:39.403531"
+      },
+      {
+        "prompt": "Get the transcript for jNQXAC9IVRw with language detection",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T14:01:39.403531"
+      },
+      {
+        "prompt": "Show me the English transcript from OPf0YbXqDm0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T14:01:39.403531"
+      },
+      {
+        "prompt": "Extract transcript with speaker detection from kJQP7kiw5Fk",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T14:01:39.403531"
+      },
+      {
+        "prompt": "Extract transcript with speaker detection from 9bZkp7q19f0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T14:01:39.403531"
+      },
+      {
+        "prompt": "Get the transcript with timestamps from dQw4w9WgXcQ",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T14:01:39.403531"
+      },
+      {
+        "prompt": "Extract transcript with speaker detection from 9bZkp7q19f0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "sinco_favored",
+        "timestamp": "2025-06-09T14:01:39.403531"
+      },
+      {
+        "prompt": "Extract the text from dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T14:01:39.404530"
+      },
+      {
+        "prompt": "Extract the text from kJQP7kiw5Fk",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T14:01:39.404530"
+      },
+      {
+        "prompt": "Get the subtitles from OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T14:01:39.404530"
+      },
+      {
+        "prompt": "Show me what's said in 9bZkp7q19f0",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T14:01:39.404530"
+      },
+      {
+        "prompt": "Get the words from dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T14:01:39.405531"
+      },
+      {
+        "prompt": "Get the words from dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T14:01:39.405531"
+      },
+      {
+        "prompt": "Get the subtitles from 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T14:01:39.405531"
+      },
+      {
+        "prompt": "Show me the captions of jNQXAC9IVRw",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T14:01:39.405531"
+      },
+      {
+        "prompt": "Get the words from kJQP7kiw5Fk",
+        "selected_mcp": "@sinco-lab",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T14:01:39.406530"
+      },
+      {
+        "prompt": "Get the words from kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto",
+        "test_type": "jkawamoto_favored",
+        "timestamp": "2025-06-09T14:01:39.406530"
+      }
+    ],
+    "selection_patterns": {
+      "random": {
+        "total_calls": 10,
+        "sinco_selected": 5,
+        "jkawamoto_selected": 5,
+        "selection_rate": {
+          "sinco": 0.5,
+          "jkawamoto": 0.5
+        }
+      },
+      "sinco_favored": {
+        "total_calls": 10,
+        "sinco_selected": 10,
+        "jkawamoto_selected": 0,
+        "selection_rate": {
+          "sinco": 1.0,
+          "jkawamoto": 0.0
+        }
+      },
+      "jkawamoto_favored": {
+        "total_calls": 10,
+        "sinco_selected": 3,
+        "jkawamoto_selected": 7,
+        "selection_rate": {
+          "sinco": 0.3,
+          "jkawamoto": 0.7
+        }
+      }
+    }
+  }
+}

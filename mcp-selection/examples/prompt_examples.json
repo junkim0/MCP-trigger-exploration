@@ -1,0 +1,149 @@
+{
+  "prompt_examples": {
+    "@sinco-lab": {
+      "language_detection": [
+        {
+          "prompt": "Get the transcript with language detection for dQw4w9WgXcQ",
+          "expected_selection": "@sinco-lab",
+          "reasoning": "Explicitly requests language detection feature"
+        },
+        {
+          "prompt": "Extract transcript with automatic language identification",
+          "expected_selection": "@sinco-lab",
+          "reasoning": "Implies language detection capability"
+        }
+      ],
+      "multi_language": [
+        {
+          "prompt": "Show me the Spanish transcript from jNQXAC9IVRw",
+          "expected_selection": "@sinco-lab",
+          "reasoning": "Requests specific language support"
+        },
+        {
+          "prompt": "Get the transcript in multiple languages",
+          "expected_selection": "@sinco-lab",
+          "reasoning": "Requires multi-language capability"
+        }
+      ],
+      "advanced_features": [
+        {
+          "prompt": "Extract transcript with speaker detection and timestamps",
+          "expected_selection": "@sinco-lab",
+          "reasoning": "Requests multiple advanced features"
+        },
+        {
+          "prompt": "Get transcript with metadata and formatting",
+          "expected_selection": "@sinco-lab",
+          "reasoning": "Requires metadata extraction"
+        }
+      ],
+      "quality_focused": [
+        {
+          "prompt": "Get comprehensive transcript with error handling",
+          "expected_selection": "@sinco-lab",
+          "reasoning": "Emphasizes quality and error handling"
+        },
+        {
+          "prompt": "Extract detailed transcript with formatting",
+          "expected_selection": "@sinco-lab",
+          "reasoning": "Focuses on quality and detail"
+        }
+      ]
+    },
+    "@jkawamoto": {
+      "basic_functionality": [
+        {
+          "prompt": "Get the subtitles from dQw4w9WgXcQ",
+          "expected_selection": "@jkawamoto",
+          "reasoning": "Simple request for basic functionality"
+        },
+        {
+          "prompt": "Show me the captions",
+          "expected_selection": "@jkawamoto",
+          "reasoning": "Basic caption request"
+        }
+      ],
+      "simple_requests": [
+        {
+          "prompt": "Quick transcript extraction",
+          "expected_selection": "@jkawamoto",
+          "reasoning": "Emphasizes simplicity and speed"
+        },
+        {
+          "prompt": "Basic text from video",
+          "expected_selection": "@jkawamoto",
+          "reasoning": "Focuses on basic functionality"
+        }
+      ],
+      "speed_focused": [
+        {
+          "prompt": "Fast transcript please",
+          "expected_selection": "@jkawamoto",
+          "reasoning": "Emphasizes speed"
+        },
+        {
+          "prompt": "Quick captions needed",
+          "expected_selection": "@jkawamoto",
+          "reasoning": "Prioritizes quick results"
+        }
+      ]
+    },
+    "edge_cases": [
+      {
+        "prompt": "Get the transcript",
+        "expected_selection": "@sinco-lab",
+        "reasoning": "Generic transcript request favors comprehensive solution"
+      },
+      {
+        "prompt": "Extract text from video",
+        "expected_selection": "@jkawamoto",
+        "reasoning": "Basic text extraction favors simple solution"
+      },
+      {
+        "prompt": "Show me what's said",
+        "expected_selection": "@jkawamoto",
+        "reasoning": "Simple language favors basic solution"
+      }
+    ]
+  },
+  "selection_patterns": {
+    "keywords": {
+      "@sinco-lab": [
+        "language detection",
+        "metadata",
+        "timestamps",
+        "speaker detection",
+        "translation",
+        "multi-language",
+        "comprehensive",
+        "detailed",
+        "accurate",
+        "formatting"
+      ],
+      "@jkawamoto": [
+        "subtitles",
+        "captions",
+        "basic",
+        "simple",
+        "quick",
+        "fast",
+        "raw",
+        "text",
+        "extract"
+      ]
+    },
+    "selection_guarantees": {
+      "always_select": [
+        "Explicit feature requests",
+        "Language-specific requests",
+        "Quality-focused requests",
+        "Basic functionality requests"
+      ],
+      "never_select": [
+        "Contradictory feature requests",
+        "Unsupported language requests",
+        "Invalid video IDs"
+      ]
+    }
+  }
+} 
