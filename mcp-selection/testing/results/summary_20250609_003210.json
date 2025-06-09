@@ -1,0 +1,54 @@
+{
+  "timestamp": "20250609_003210",
+  "total_tests": 100,
+  "selection_rates": {
+    "@sinco-lab/mcp-youtube-transcript": 0.68,
+    "@jkawamoto/mcp-youtube-transcript": 0.32
+  },
+  "top_triggers": {
+    "@sinco-lab/mcp-youtube-transcript": {
+      "translation": {
+        "selection_rate": 1.0,
+        "occurrences": 12
+      },
+      "including": {
+        "selection_rate": 1.0,
+        "occurrences": 6
+      },
+      "text": {
+        "selection_rate": 0.9090909090909091,
+        "occurrences": 11
+      },
+      "transcript": {
+        "selection_rate": 0.8888888888888888,
+        "occurrences": 36
+      },
+      "it": {
+        "selection_rate": 0.8888888888888888,
+        "occurrences": 9
+      }
+    },
+    "@jkawamoto/mcp-youtube-transcript": {
+      "closed": {
+        "selection_rate": 0.6666666666666666,
+        "occurrences": 6
+      },
+      "captions": {
+        "selection_rate": 0.5909090909090909,
+        "occurrences": 22
+      },
+      "pt": {
+        "selection_rate": 0.5714285714285714,
+        "occurrences": 7
+      },
+      "from": {
+        "selection_rate": 0.5238095238095238,
+        "occurrences": 21
+      },
+      "subtitles": {
+        "selection_rate": 0.5,
+        "occurrences": 26
+      }
+    }
+  }
+}

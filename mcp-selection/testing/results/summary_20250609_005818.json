@@ -1,0 +1,61 @@
+{
+  "experiment": {
+    "name": "Basic vs Advanced Functionality Selection Test",
+    "description": "\n    Testing how Claude selects between two similar YouTube transcript MCPs based on prompt wording.\n    This experiment focuses on using basic/simple terminology to favor the @jkawamoto implementation\n    over the more feature-rich @sinco-lab implementation.\n    ",
+    "date": "2025-06-09T00:58:19.000926"
+  },
+  "key_findings": {
+    "total_tests": 100,
+    "selection_rates": {
+      "@sinco-lab/mcp-youtube-transcript": 0.0,
+      "@jkawamoto/mcp-youtube-transcript": 1.0
+    },
+    "preferred_mcp": "@jkawamoto/mcp-youtube-transcript",
+    "top_triggers": {
+      "@sinco-lab/mcp-youtube-transcript": {
+        "from": {
+          "selection_rate": 0.0,
+          "occurrences": 59
+        },
+        "basic": {
+          "selection_rate": 0.0,
+          "occurrences": 43
+        },
+        "for": {
+          "selection_rate": 0.0,
+          "occurrences": 41
+        },
+        "text": {
+          "selection_rate": 0.0,
+          "occurrences": 40
+        },
+        "download": {
+          "selection_rate": 0.0,
+          "occurrences": 38
+        }
+      },
+      "@jkawamoto/mcp-youtube-transcript": {
+        "from": {
+          "selection_rate": 1.0,
+          "occurrences": 59
+        },
+        "basic": {
+          "selection_rate": 1.0,
+          "occurrences": 43
+        },
+        "for": {
+          "selection_rate": 1.0,
+          "occurrences": 41
+        },
+        "text": {
+          "selection_rate": 1.0,
+          "occurrences": 40
+        },
+        "download": {
+          "selection_rate": 1.0,
+          "occurrences": 38
+        }
+      }
+    }
+  }
+}

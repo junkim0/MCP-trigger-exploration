@@ -1,0 +1,2107 @@
+{
+  "summary": {
+    "experiment_name": "Basic vs Advanced Functionality Selection Test",
+    "timestamp": "20250609_020430",
+    "total_tests": 100,
+    "selection_rates": {
+      "@sinco-lab/mcp-youtube-transcript": 100.0,
+      "@jkawamoto/mcp-youtube-transcript": 0.0
+    },
+    "most_effective_prompts": {
+      "@sinco-lab/mcp-youtube-transcript": [
+        {
+          "prompt": "Extract comprehensive transcript from JGwWNGJdvx8 with metadata in es with fallback with high accuracy",
+          "score_difference": 6.0,
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          }
+        },
+        {
+          "prompt": "Download transcript with fallback language for kJQP7kiw5Fk with it support with precise formatting",
+          "score_difference": 6.0,
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          }
+        },
+        {
+          "prompt": "Download transcript with fallback language for dQw4w9WgXcQ with error handling with it translation with precise formatting",
+          "score_difference": 6.0,
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          }
+        },
+        {
+          "prompt": "Extract comprehensive transcript from JGwWNGJdvx8 with language detection with precise formatting",
+          "score_difference": 6.0,
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          }
+        },
+        {
+          "prompt": "Get detailed transcript with timestamps from kJQP7kiw5Fk with speaker detection in it with detection with high accuracy",
+          "score_difference": 6.0,
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          }
+        }
+      ],
+      "@jkawamoto/mcp-youtube-transcript": []
+    },
+    "top_triggers": {
+      "@sinco-lab/mcp-youtube-transcript": {
+        "with": {
+          "selection_rate": 1.0,
+          "occurrences": 263
+        },
+        "transcript": {
+          "selection_rate": 1.0,
+          "occurrences": 100
+        },
+        "for": {
+          "selection_rate": 1.0,
+          "occurrences": 65
+        },
+        "language": {
+          "selection_rate": 1.0,
+          "occurrences": 48
+        },
+        "detection": {
+          "selection_rate": 1.0,
+          "occurrences": 44
+        }
+      },
+      "@jkawamoto/mcp-youtube-transcript": {}
+    }
+  },
+  "test_methodology": {
+    "description": "\n    Testing how Claude selects between two similar YouTube transcript MCPs based on prompt wording.\n    This experiment focuses on using basic/simple terminology to favor the @jkawamoto implementation\n    over the more feature-rich @sinco-lab implementation.\n    ",
+    "strategy": {
+      "prompt_focus": [
+        "Basic functionality emphasis",
+        "Speed and simplicity indicators",
+        "Minimal feature requirements"
+      ],
+      "key_terms": {
+        "basic_terms": [
+          "simple",
+          "basic",
+          "plain",
+          "raw"
+        ],
+        "speed_terms": [
+          "quick",
+          "fast",
+          "rapid",
+          "instant"
+        ],
+        "simplicity_terms": [
+          "nothing fancy",
+          "keep it simple"
+        ]
+      }
+    },
+    "test_cases": 100,
+    "prompt_generation": "Automated generation with emphasis on basic functionality",
+    "selection_criteria": "Score-based selection using weighted trigger terms"
+  },
+  "detailed_results": {
+    "@sinco-lab/mcp-youtube-transcript": {
+      "total_calls": 100,
+      "selected": 100,
+      "selection_rate": 100.0,
+      "test_history": [
+        {
+          "prompt": "Extract transcript with word count for OPf0YbXqDm0 with it support with high accuracy",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 2.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.530186"
+        },
+        {
+          "prompt": "Extract transcript with error handling for 9bZkp7q19f0 with word count with comprehensive features",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.530186"
+        },
+        {
+          "prompt": "Extract comprehensive transcript from JGwWNGJdvx8 with metadata in es with fallback with high accuracy",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.530186"
+        },
+        {
+          "prompt": "Download transcript with fallback language for kJQP7kiw5Fk with it support with precise formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.530186"
+        },
+        {
+          "prompt": "Extract transcript with error handling for 9bZkp7q19f0 with language fallback with it support",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.531188"
+        },
+        {
+          "prompt": "Extract transcript with language detection for dQw4w9WgXcQ",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.531188"
+        },
+        {
+          "prompt": "Download transcript with fallback language for dQw4w9WgXcQ with error handling with it translation with precise formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.531188"
+        },
+        {
+          "prompt": "Extract transcript with word count for OPf0YbXqDm0 with speaker detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.531188"
+        },
+        {
+          "prompt": "Extract comprehensive transcript from JGwWNGJdvx8 with language detection with precise formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.531188"
+        },
+        {
+          "prompt": "Extract transcript with language detection for 9bZkp7q19f0 in de with fallback with high accuracy",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.531188"
+        },
+        {
+          "prompt": "Get detailed transcript with timestamps from kJQP7kiw5Fk with speaker detection in it with detection with high accuracy",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.531188"
+        },
+        {
+          "prompt": "Download transcript with language support from OPf0YbXqDm0 in it with fallback",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.531188"
+        },
+        {
+          "prompt": "Get formatted transcript with speaker detection for kJQP7kiw5Fk with error handling with fr support with comprehensive features",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.532188"
+        },
+        {
+          "prompt": "Extract transcript with word count for dQw4w9WgXcQ",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 1.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.532188"
+        },
+        {
+          "prompt": "Extract transcript with word count for kJQP7kiw5Fk with language detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.532188"
+        },
+        {
+          "prompt": "Download transcript with language support from JGwWNGJdvx8 with comprehensive features with precise formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.532188"
+        },
+        {
+          "prompt": "Download transcript with fallback language for 9bZkp7q19f0 with detailed formatting with high accuracy",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.532188"
+        },
+        {
+          "prompt": "Extract transcript with word count for kJQP7kiw5Fk with comprehensive features",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.532188"
+        },
+        {
+          "prompt": "Extract transcript with language detection for dQw4w9WgXcQ with format preservation with comprehensive features",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.532188"
+        },
+        {
+          "prompt": "Extract transcript with language detection for OPf0YbXqDm0 with error handling with comprehensive features",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.532188"
+        },
+        {
+          "prompt": "Download transcript with language support from OPf0YbXqDm0 with format preservation with de support",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.532188"
+        },
+        {
+          "prompt": "Download transcript with language support from 9bZkp7q19f0 with detailed formatting with detailed output",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.532188"
+        },
+        {
+          "prompt": "Get formatted transcript with speaker detection for kJQP7kiw5Fk with word count with detailed output",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.533187"
+        },
+        {
+          "prompt": "Get formatted transcript with speaker detection for OPf0YbXqDm0 with language detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.533187"
+        },
+        {
+          "prompt": "Download transcript with metadata for kJQP7kiw5Fk with detailed formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.533187"
+        },
+        {
+          "prompt": "Download transcript with fallback language for JGwWNGJdvx8",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.533187"
+        },
+        {
+          "prompt": "Extract transcript with word count for 9bZkp7q19f0 with metadata with fr support",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.533187"
+        },
+        {
+          "prompt": "Extract transcript with word count for 9bZkp7q19f0 with pt translation with comprehensive features",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.533187"
+        },
+        {
+          "prompt": "Download transcript with language support from kJQP7kiw5Fk with comprehensive features in fr with fallback with precise formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.533187"
+        },
+        {
+          "prompt": "Get transcript with format preservation from JGwWNGJdvx8",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 3.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.533187"
+        },
+        {
+          "prompt": "Extract transcript with error handling for dQw4w9WgXcQ in fr with detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.533187"
+        },
+        {
+          "prompt": "Extract transcript with language detection for JGwWNGJdvx8 with metadata in es with formatting with precise formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.534187"
+        },
+        {
+          "prompt": "Extract transcript with language detection for JGwWNGJdvx8 with comprehensive features",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.534187"
+        },
+        {
+          "prompt": "Extract transcript with word count for OPf0YbXqDm0 in pt with fallback",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.534187"
+        },
+        {
+          "prompt": "Download transcript with metadata for 9bZkp7q19f0 with fr translation",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.534187"
+        },
+        {
+          "prompt": "Extract transcript with word count for dQw4w9WgXcQ in it with fallback",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.534187"
+        },
+        {
+          "prompt": "Extract transcript with word count for kJQP7kiw5Fk with en translation with detailed output",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.534187"
+        },
+        {
+          "prompt": "Extract transcript with error handling for 9bZkp7q19f0 with language detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.534187"
+        },
+        {
+          "prompt": "Extract comprehensive transcript from OPf0YbXqDm0 with language fallback",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.534187"
+        },
+        {
+          "prompt": "Extract transcript with error handling for 9bZkp7q19f0 with precise formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.534187"
+        },
+        {
+          "prompt": "Get transcript with format preservation from 9bZkp7q19f0 with language fallback in fr with fallback with detailed output",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.534187"
+        },
+        {
+          "prompt": "Get transcript with format preservation from JGwWNGJdvx8",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 3.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.535187"
+        },
+        {
+          "prompt": "Extract comprehensive transcript from 9bZkp7q19f0 with language fallback with precise formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.535187"
+        },
+        {
+          "prompt": "Get transcript with format preservation from JGwWNGJdvx8 with metadata with robust handling",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.535187"
+        },
+        {
+          "prompt": "Get detailed transcript with timestamps from OPf0YbXqDm0 including timestamps with pt translation with comprehensive features",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.535187"
+        },
+        {
+          "prompt": "Extract transcript with language detection for dQw4w9WgXcQ with detailed formatting in de with detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.536188"
+        },
+        {
+          "prompt": "Download transcript with metadata for 9bZkp7q19f0 in fr with detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.536188"
+        },
+        {
+          "prompt": "Download transcript with language support from OPf0YbXqDm0 with comprehensive features",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.536188"
+        },
+        {
+          "prompt": "Download transcript with language support from 9bZkp7q19f0 with format preservation with de support",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.536188"
+        },
+        {
+          "prompt": "Download transcript with fallback language for kJQP7kiw5Fk with detailed formatting in fr with formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.536188"
+        },
+        {
+          "prompt": "Download transcript with fallback language for kJQP7kiw5Fk with metadata",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.536188"
+        },
+        {
+          "prompt": "Get formatted transcript with speaker detection for JGwWNGJdvx8 with format preservation with pt translation",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.536188"
+        },
+        {
+          "prompt": "Extract transcript with error handling for dQw4w9WgXcQ with format preservation",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 3.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.536188"
+        },
+        {
+          "prompt": "Download transcript with language support from JGwWNGJdvx8 with format preservation in en with detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.537190"
+        },
+        {
+          "prompt": "Download transcript with metadata for kJQP7kiw5Fk with language detection in en with fallback with high accuracy",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.537190"
+        },
+        {
+          "prompt": "Get transcript with format preservation from 9bZkp7q19f0 with robust handling",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.537190"
+        },
+        {
+          "prompt": "Extract comprehensive transcript from kJQP7kiw5Fk with detailed formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.537190"
+        },
+        {
+          "prompt": "Download transcript with metadata for kJQP7kiw5Fk including timestamps with pt translation with robust handling",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.537190"
+        },
+        {
+          "prompt": "Extract transcript with language detection for 9bZkp7q19f0 in es with formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.537190"
+        },
+        {
+          "prompt": "Download transcript with fallback language for kJQP7kiw5Fk",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.537190"
+        },
+        {
+          "prompt": "Download transcript with fallback language for JGwWNGJdvx8 with error handling with es translation",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.538188"
+        },
+        {
+          "prompt": "Get formatted transcript with speaker detection for kJQP7kiw5Fk with format preservation with en translation with comprehensive features",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.538188"
+        },
+        {
+          "prompt": "Extract transcript with error handling for JGwWNGJdvx8 with word count",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 3.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.538188"
+        },
+        {
+          "prompt": "Download transcript with fallback language for OPf0YbXqDm0 with format preservation in pt with detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.538188"
+        },
+        {
+          "prompt": "Extract transcript with error handling for OPf0YbXqDm0 with format preservation with de support with precise formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.538188"
+        },
+        {
+          "prompt": "Extract transcript with error handling for 9bZkp7q19f0 with speaker detection in fr with formatting with detailed output",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.538188"
+        },
+        {
+          "prompt": "Download transcript with metadata for JGwWNGJdvx8 with comprehensive features in it with fallback",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.538188"
+        },
+        {
+          "prompt": "Extract comprehensive transcript from dQw4w9WgXcQ with speaker detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.538188"
+        },
+        {
+          "prompt": "Get detailed transcript with timestamps from kJQP7kiw5Fk in de with formatting with detailed output",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.538188"
+        },
+        {
+          "prompt": "Extract comprehensive transcript from 9bZkp7q19f0 with format preservation in en with formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.539187"
+        },
+        {
+          "prompt": "Get detailed transcript with timestamps from dQw4w9WgXcQ with language detection in pt with fallback with precise formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.539187"
+        },
+        {
+          "prompt": "Download transcript with metadata for JGwWNGJdvx8 with error handling with robust handling",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.539187"
+        },
+        {
+          "prompt": "Get detailed transcript with timestamps from 9bZkp7q19f0 with language fallback in pt with detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.539187"
+        },
+        {
+          "prompt": "Download transcript with metadata for OPf0YbXqDm0 with language fallback with comprehensive features",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.539187"
+        },
+        {
+          "prompt": "Extract comprehensive transcript from dQw4w9WgXcQ with language fallback with comprehensive features",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.539187"
+        },
+        {
+          "prompt": "Get formatted transcript with speaker detection for OPf0YbXqDm0 with word count with fr translation",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.539187"
+        },
+        {
+          "prompt": "Download transcript with metadata for kJQP7kiw5Fk with speaker detection in fr with detection with detailed output",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.539187"
+        },
+        {
+          "prompt": "Download transcript with language support from OPf0YbXqDm0 with error handling with it translation",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.539187"
+        },
+        {
+          "prompt": "Download transcript with language support from OPf0YbXqDm0 with format preservation",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.540187"
+        },
+        {
+          "prompt": "Download transcript with language support from 9bZkp7q19f0 with metadata with detailed output",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.540187"
+        },
+        {
+          "prompt": "Get transcript with format preservation from JGwWNGJdvx8",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 3.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.540187"
+        },
+        {
+          "prompt": "Download transcript with fallback language for 9bZkp7q19f0 with format preservation in en with detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.540187"
+        },
+        {
+          "prompt": "Download transcript with metadata for kJQP7kiw5Fk with speaker detection in es with formatting with precise formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.540187"
+        },
+        {
+          "prompt": "Download transcript with metadata for JGwWNGJdvx8 with format preservation with fr translation",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.540187"
+        },
+        {
+          "prompt": "Extract transcript with word count for 9bZkp7q19f0 with detailed formatting in it with fallback",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.540187"
+        },
+        {
+          "prompt": "Extract transcript with error handling for dQw4w9WgXcQ with word count with de translation",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.540187"
+        },
+        {
+          "prompt": "Get transcript with format preservation from dQw4w9WgXcQ including timestamps in pt with formatting with detailed output",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.540187"
+        },
+        {
+          "prompt": "Get detailed transcript with timestamps from OPf0YbXqDm0 with de translation with high accuracy",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.541187"
+        },
+        {
+          "prompt": "Extract comprehensive transcript from kJQP7kiw5Fk with language detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.541187"
+        },
+        {
+          "prompt": "Download transcript with metadata for dQw4w9WgXcQ with speaker detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.541187"
+        },
+        {
+          "prompt": "Get transcript with format preservation from kJQP7kiw5Fk",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 3.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.541187"
+        },
+        {
+          "prompt": "Download transcript with fallback language for JGwWNGJdvx8 with de support",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.541187"
+        },
+        {
+          "prompt": "Get formatted transcript with speaker detection for kJQP7kiw5Fk with error handling with comprehensive features",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.541187"
+        },
+        {
+          "prompt": "Download transcript with fallback language for 9bZkp7q19f0 including timestamps with high accuracy",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.541187"
+        },
+        {
+          "prompt": "Extract transcript with language detection for dQw4w9WgXcQ with metadata with de translation",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.541187"
+        },
+        {
+          "prompt": "Download transcript with fallback language for kJQP7kiw5Fk with word count with de support",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.541187"
+        },
+        {
+          "prompt": "Extract transcript with error handling for OPf0YbXqDm0 with detailed formatting in pt with detection with robust handling",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.541187"
+        },
+        {
+          "prompt": "Download transcript with metadata for JGwWNGJdvx8 with format preservation in it with detection with robust handling",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.542186"
+        },
+        {
+          "prompt": "Download transcript with language support from JGwWNGJdvx8 with speaker detection in en with detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.542186"
+        },
+        {
+          "prompt": "Get formatted transcript with speaker detection for dQw4w9WgXcQ with word count in en with fallback",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.542186"
+        }
+      ],
+      "selection_patterns": {
+        "extract": {
+          "count": 40,
+          "selected": 40
+        },
+        "transcript": {
+          "count": 100,
+          "selected": 100
+        },
+        "with": {
+          "count": 263,
+          "selected": 263
+        },
+        "word": {
+          "count": 18,
+          "selected": 18
+        },
+        "count": {
+          "count": 18,
+          "selected": 18
+        },
+        "for": {
+          "count": 65,
+          "selected": 65
+        },
+        "opf0ybxqdm0": {
+          "count": 18,
+          "selected": 18
+        },
+        "it": {
+          "count": 11,
+          "selected": 11
+        },
+        "support": {
+          "count": 22,
+          "selected": 22
+        },
+        "high": {
+          "count": 8,
+          "selected": 8
+        },
+        "accuracy": {
+          "count": 8,
+          "selected": 8
+        },
+        "error": {
+          "count": 18,
+          "selected": 18
+        },
+        "handling": {
+          "count": 24,
+          "selected": 24
+        },
+        "9bzkp7q19f0": {
+          "count": 23,
+          "selected": 23
+        },
+        "comprehensive": {
+          "count": 25,
+          "selected": 25
+        },
+        "features": {
+          "count": 16,
+          "selected": 16
+        },
+        "from": {
+          "count": 35,
+          "selected": 35
+        },
+        "jgwwngjdvx8": {
+          "count": 20,
+          "selected": 20
+        },
+        "metadata": {
+          "count": 20,
+          "selected": 20
+        },
+        "in": {
+          "count": 32,
+          "selected": 32
+        },
+        "es": {
+          "count": 5,
+          "selected": 5
+        },
+        "fallback": {
+          "count": 32,
+          "selected": 32
+        },
+        "download": {
+          "count": 38,
+          "selected": 38
+        },
+        "language": {
+          "count": 48,
+          "selected": 48
+        },
+        "kjqp7kiw5fk": {
+          "count": 23,
+          "selected": 23
+        },
+        "precise": {
+          "count": 11,
+          "selected": 11
+        },
+        "formatting": {
+          "count": 27,
+          "selected": 27
+        },
+        "detection": {
+          "count": 44,
+          "selected": 44
+        },
+        "dqw4w9wgxcq": {
+          "count": 16,
+          "selected": 16
+        },
+        "translation": {
+          "count": 15,
+          "selected": 15
+        },
+        "speaker": {
+          "count": 16,
+          "selected": 16
+        },
+        "de": {
+          "count": 11,
+          "selected": 11
+        },
+        "get": {
+          "count": 22,
+          "selected": 22
+        },
+        "detailed": {
+          "count": 23,
+          "selected": 23
+        },
+        "timestamps": {
+          "count": 10,
+          "selected": 10
+        },
+        "formatted": {
+          "count": 8,
+          "selected": 8
+        },
+        "fr": {
+          "count": 12,
+          "selected": 12
+        },
+        "format": {
+          "count": 22,
+          "selected": 22
+        },
+        "preservation": {
+          "count": 22,
+          "selected": 22
+        },
+        "output": {
+          "count": 9,
+          "selected": 9
+        },
+        "pt": {
+          "count": 10,
+          "selected": 10
+        },
+        "en": {
+          "count": 8,
+          "selected": 8
+        },
+        "robust": {
+          "count": 6,
+          "selected": 6
+        },
+        "including": {
+          "count": 4,
+          "selected": 4
+        }
+      }
+    },
+    "@jkawamoto/mcp-youtube-transcript": {
+      "total_calls": 100,
+      "selected": 0,
+      "selection_rate": 0.0,
+      "test_history": [
+        {
+          "prompt": "Extract transcript with word count for OPf0YbXqDm0 with it support with high accuracy",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 2.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.530186"
+        },
+        {
+          "prompt": "Extract transcript with error handling for 9bZkp7q19f0 with word count with comprehensive features",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.530186"
+        },
+        {
+          "prompt": "Extract comprehensive transcript from JGwWNGJdvx8 with metadata in es with fallback with high accuracy",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.530186"
+        },
+        {
+          "prompt": "Download transcript with fallback language for kJQP7kiw5Fk with it support with precise formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.530186"
+        },
+        {
+          "prompt": "Extract transcript with error handling for 9bZkp7q19f0 with language fallback with it support",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.531188"
+        },
+        {
+          "prompt": "Extract transcript with language detection for dQw4w9WgXcQ",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.531188"
+        },
+        {
+          "prompt": "Download transcript with fallback language for dQw4w9WgXcQ with error handling with it translation with precise formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.531188"
+        },
+        {
+          "prompt": "Extract transcript with word count for OPf0YbXqDm0 with speaker detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.531188"
+        },
+        {
+          "prompt": "Extract comprehensive transcript from JGwWNGJdvx8 with language detection with precise formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.531188"
+        },
+        {
+          "prompt": "Extract transcript with language detection for 9bZkp7q19f0 in de with fallback with high accuracy",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.531188"
+        },
+        {
+          "prompt": "Get detailed transcript with timestamps from kJQP7kiw5Fk with speaker detection in it with detection with high accuracy",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.531188"
+        },
+        {
+          "prompt": "Download transcript with language support from OPf0YbXqDm0 in it with fallback",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.531188"
+        },
+        {
+          "prompt": "Get formatted transcript with speaker detection for kJQP7kiw5Fk with error handling with fr support with comprehensive features",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.532188"
+        },
+        {
+          "prompt": "Extract transcript with word count for dQw4w9WgXcQ",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 1.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.532188"
+        },
+        {
+          "prompt": "Extract transcript with word count for kJQP7kiw5Fk with language detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.532188"
+        },
+        {
+          "prompt": "Download transcript with language support from JGwWNGJdvx8 with comprehensive features with precise formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.532188"
+        },
+        {
+          "prompt": "Download transcript with fallback language for 9bZkp7q19f0 with detailed formatting with high accuracy",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.532188"
+        },
+        {
+          "prompt": "Extract transcript with word count for kJQP7kiw5Fk with comprehensive features",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.532188"
+        },
+        {
+          "prompt": "Extract transcript with language detection for dQw4w9WgXcQ with format preservation with comprehensive features",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.532188"
+        },
+        {
+          "prompt": "Extract transcript with language detection for OPf0YbXqDm0 with error handling with comprehensive features",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.532188"
+        },
+        {
+          "prompt": "Download transcript with language support from OPf0YbXqDm0 with format preservation with de support",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.532188"
+        },
+        {
+          "prompt": "Download transcript with language support from 9bZkp7q19f0 with detailed formatting with detailed output",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.532188"
+        },
+        {
+          "prompt": "Get formatted transcript with speaker detection for kJQP7kiw5Fk with word count with detailed output",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.533187"
+        },
+        {
+          "prompt": "Get formatted transcript with speaker detection for OPf0YbXqDm0 with language detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.533187"
+        },
+        {
+          "prompt": "Download transcript with metadata for kJQP7kiw5Fk with detailed formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.533187"
+        },
+        {
+          "prompt": "Download transcript with fallback language for JGwWNGJdvx8",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.533187"
+        },
+        {
+          "prompt": "Extract transcript with word count for 9bZkp7q19f0 with metadata with fr support",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.533187"
+        },
+        {
+          "prompt": "Extract transcript with word count for 9bZkp7q19f0 with pt translation with comprehensive features",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.533187"
+        },
+        {
+          "prompt": "Download transcript with language support from kJQP7kiw5Fk with comprehensive features in fr with fallback with precise formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.533187"
+        },
+        {
+          "prompt": "Get transcript with format preservation from JGwWNGJdvx8",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 3.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.533187"
+        },
+        {
+          "prompt": "Extract transcript with error handling for dQw4w9WgXcQ in fr with detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.533187"
+        },
+        {
+          "prompt": "Extract transcript with language detection for JGwWNGJdvx8 with metadata in es with formatting with precise formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.534187"
+        },
+        {
+          "prompt": "Extract transcript with language detection for JGwWNGJdvx8 with comprehensive features",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.534187"
+        },
+        {
+          "prompt": "Extract transcript with word count for OPf0YbXqDm0 in pt with fallback",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.534187"
+        },
+        {
+          "prompt": "Download transcript with metadata for 9bZkp7q19f0 with fr translation",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.534187"
+        },
+        {
+          "prompt": "Extract transcript with word count for dQw4w9WgXcQ in it with fallback",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.534187"
+        },
+        {
+          "prompt": "Extract transcript with word count for kJQP7kiw5Fk with en translation with detailed output",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.534187"
+        },
+        {
+          "prompt": "Extract transcript with error handling for 9bZkp7q19f0 with language detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.534187"
+        },
+        {
+          "prompt": "Extract comprehensive transcript from OPf0YbXqDm0 with language fallback",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.534187"
+        },
+        {
+          "prompt": "Extract transcript with error handling for 9bZkp7q19f0 with precise formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.534187"
+        },
+        {
+          "prompt": "Get transcript with format preservation from 9bZkp7q19f0 with language fallback in fr with fallback with detailed output",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.534187"
+        },
+        {
+          "prompt": "Get transcript with format preservation from JGwWNGJdvx8",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 3.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.535187"
+        },
+        {
+          "prompt": "Extract comprehensive transcript from 9bZkp7q19f0 with language fallback with precise formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.535187"
+        },
+        {
+          "prompt": "Get transcript with format preservation from JGwWNGJdvx8 with metadata with robust handling",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.535187"
+        },
+        {
+          "prompt": "Get detailed transcript with timestamps from OPf0YbXqDm0 including timestamps with pt translation with comprehensive features",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.535187"
+        },
+        {
+          "prompt": "Extract transcript with language detection for dQw4w9WgXcQ with detailed formatting in de with detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.536188"
+        },
+        {
+          "prompt": "Download transcript with metadata for 9bZkp7q19f0 in fr with detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.536188"
+        },
+        {
+          "prompt": "Download transcript with language support from OPf0YbXqDm0 with comprehensive features",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.536188"
+        },
+        {
+          "prompt": "Download transcript with language support from 9bZkp7q19f0 with format preservation with de support",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.536188"
+        },
+        {
+          "prompt": "Download transcript with fallback language for kJQP7kiw5Fk with detailed formatting in fr with formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.536188"
+        },
+        {
+          "prompt": "Download transcript with fallback language for kJQP7kiw5Fk with metadata",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.536188"
+        },
+        {
+          "prompt": "Get formatted transcript with speaker detection for JGwWNGJdvx8 with format preservation with pt translation",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.536188"
+        },
+        {
+          "prompt": "Extract transcript with error handling for dQw4w9WgXcQ with format preservation",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 3.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.536188"
+        },
+        {
+          "prompt": "Download transcript with language support from JGwWNGJdvx8 with format preservation in en with detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.537190"
+        },
+        {
+          "prompt": "Download transcript with metadata for kJQP7kiw5Fk with language detection in en with fallback with high accuracy",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.537190"
+        },
+        {
+          "prompt": "Get transcript with format preservation from 9bZkp7q19f0 with robust handling",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.537190"
+        },
+        {
+          "prompt": "Extract comprehensive transcript from kJQP7kiw5Fk with detailed formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.537190"
+        },
+        {
+          "prompt": "Download transcript with metadata for kJQP7kiw5Fk including timestamps with pt translation with robust handling",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.537190"
+        },
+        {
+          "prompt": "Extract transcript with language detection for 9bZkp7q19f0 in es with formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.537190"
+        },
+        {
+          "prompt": "Download transcript with fallback language for kJQP7kiw5Fk",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.537190"
+        },
+        {
+          "prompt": "Download transcript with fallback language for JGwWNGJdvx8 with error handling with es translation",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.538188"
+        },
+        {
+          "prompt": "Get formatted transcript with speaker detection for kJQP7kiw5Fk with format preservation with en translation with comprehensive features",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.538188"
+        },
+        {
+          "prompt": "Extract transcript with error handling for JGwWNGJdvx8 with word count",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 3.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.538188"
+        },
+        {
+          "prompt": "Download transcript with fallback language for OPf0YbXqDm0 with format preservation in pt with detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.538188"
+        },
+        {
+          "prompt": "Extract transcript with error handling for OPf0YbXqDm0 with format preservation with de support with precise formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.538188"
+        },
+        {
+          "prompt": "Extract transcript with error handling for 9bZkp7q19f0 with speaker detection in fr with formatting with detailed output",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.538188"
+        },
+        {
+          "prompt": "Download transcript with metadata for JGwWNGJdvx8 with comprehensive features in it with fallback",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.538188"
+        },
+        {
+          "prompt": "Extract comprehensive transcript from dQw4w9WgXcQ with speaker detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.538188"
+        },
+        {
+          "prompt": "Get detailed transcript with timestamps from kJQP7kiw5Fk in de with formatting with detailed output",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.538188"
+        },
+        {
+          "prompt": "Extract comprehensive transcript from 9bZkp7q19f0 with format preservation in en with formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.539187"
+        },
+        {
+          "prompt": "Get detailed transcript with timestamps from dQw4w9WgXcQ with language detection in pt with fallback with precise formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.539187"
+        },
+        {
+          "prompt": "Download transcript with metadata for JGwWNGJdvx8 with error handling with robust handling",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.539187"
+        },
+        {
+          "prompt": "Get detailed transcript with timestamps from 9bZkp7q19f0 with language fallback in pt with detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.539187"
+        },
+        {
+          "prompt": "Download transcript with metadata for OPf0YbXqDm0 with language fallback with comprehensive features",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.539187"
+        },
+        {
+          "prompt": "Extract comprehensive transcript from dQw4w9WgXcQ with language fallback with comprehensive features",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.539187"
+        },
+        {
+          "prompt": "Get formatted transcript with speaker detection for OPf0YbXqDm0 with word count with fr translation",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.539187"
+        },
+        {
+          "prompt": "Download transcript with metadata for kJQP7kiw5Fk with speaker detection in fr with detection with detailed output",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.539187"
+        },
+        {
+          "prompt": "Download transcript with language support from OPf0YbXqDm0 with error handling with it translation",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.539187"
+        },
+        {
+          "prompt": "Download transcript with language support from OPf0YbXqDm0 with format preservation",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.540187"
+        },
+        {
+          "prompt": "Download transcript with language support from 9bZkp7q19f0 with metadata with detailed output",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.540187"
+        },
+        {
+          "prompt": "Get transcript with format preservation from JGwWNGJdvx8",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 3.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.540187"
+        },
+        {
+          "prompt": "Download transcript with fallback language for 9bZkp7q19f0 with format preservation in en with detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.540187"
+        },
+        {
+          "prompt": "Download transcript with metadata for kJQP7kiw5Fk with speaker detection in es with formatting with precise formatting",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.540187"
+        },
+        {
+          "prompt": "Download transcript with metadata for JGwWNGJdvx8 with format preservation with fr translation",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.540187"
+        },
+        {
+          "prompt": "Extract transcript with word count for 9bZkp7q19f0 with detailed formatting in it with fallback",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.540187"
+        },
+        {
+          "prompt": "Extract transcript with error handling for dQw4w9WgXcQ with word count with de translation",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.540187"
+        },
+        {
+          "prompt": "Get transcript with format preservation from dQw4w9WgXcQ including timestamps in pt with formatting with detailed output",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.540187"
+        },
+        {
+          "prompt": "Get detailed transcript with timestamps from OPf0YbXqDm0 with de translation with high accuracy",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.541187"
+        },
+        {
+          "prompt": "Extract comprehensive transcript from kJQP7kiw5Fk with language detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.541187"
+        },
+        {
+          "prompt": "Download transcript with metadata for dQw4w9WgXcQ with speaker detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.541187"
+        },
+        {
+          "prompt": "Get transcript with format preservation from kJQP7kiw5Fk",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 3.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.541187"
+        },
+        {
+          "prompt": "Download transcript with fallback language for JGwWNGJdvx8 with de support",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.541187"
+        },
+        {
+          "prompt": "Get formatted transcript with speaker detection for kJQP7kiw5Fk with error handling with comprehensive features",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.541187"
+        },
+        {
+          "prompt": "Download transcript with fallback language for 9bZkp7q19f0 including timestamps with high accuracy",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.541187"
+        },
+        {
+          "prompt": "Extract transcript with language detection for dQw4w9WgXcQ with metadata with de translation",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.541187"
+        },
+        {
+          "prompt": "Download transcript with fallback language for kJQP7kiw5Fk with word count with de support",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.541187"
+        },
+        {
+          "prompt": "Extract transcript with error handling for OPf0YbXqDm0 with detailed formatting in pt with detection with robust handling",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.541187"
+        },
+        {
+          "prompt": "Download transcript with metadata for JGwWNGJdvx8 with format preservation in it with detection with robust handling",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 6.0,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.542186"
+        },
+        {
+          "prompt": "Download transcript with language support from JGwWNGJdvx8 with speaker detection in en with detection",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.542186"
+        },
+        {
+          "prompt": "Get formatted transcript with speaker detection for dQw4w9WgXcQ with word count in en with fallback",
+          "selected_mcp": "@sinco-lab/mcp-youtube-transcript",
+          "scores": {
+            "sinco": 4.5,
+            "jkawamoto": 0
+          },
+          "timestamp": "2025-06-09T02:04:30.542186"
+        }
+      ],
+      "selection_patterns": {}
+    }
+  }
+}

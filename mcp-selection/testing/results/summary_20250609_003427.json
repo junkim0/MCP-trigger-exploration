@@ -1,0 +1,54 @@
+{
+  "timestamp": "20250609_003427",
+  "total_tests": 100,
+  "selection_rates": {
+    "@sinco-lab/mcp-youtube-transcript": 0.0,
+    "@jkawamoto/mcp-youtube-transcript": 1.0
+  },
+  "top_triggers": {
+    "@sinco-lab/mcp-youtube-transcript": {
+      "from": {
+        "selection_rate": 0.0,
+        "occurrences": 60
+      },
+      "fancy": {
+        "selection_rate": 0.0,
+        "occurrences": 43
+      },
+      "quick": {
+        "selection_rate": 0.0,
+        "occurrences": 41
+      },
+      "for": {
+        "selection_rate": 0.0,
+        "occurrences": 40
+      },
+      "text": {
+        "selection_rate": 0.0,
+        "occurrences": 39
+      }
+    },
+    "@jkawamoto/mcp-youtube-transcript": {
+      "from": {
+        "selection_rate": 1.0,
+        "occurrences": 60
+      },
+      "fancy": {
+        "selection_rate": 1.0,
+        "occurrences": 43
+      },
+      "quick": {
+        "selection_rate": 1.0,
+        "occurrences": 41
+      },
+      "for": {
+        "selection_rate": 1.0,
+        "occurrences": 40
+      },
+      "text": {
+        "selection_rate": 1.0,
+        "occurrences": 39
+      }
+    }
+  }
+}

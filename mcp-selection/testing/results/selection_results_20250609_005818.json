@@ -1,0 +1,3387 @@
+{
+  "experiment_summary": {
+    "name": "Basic vs Advanced Functionality Selection Test",
+    "description": "\n    Testing how Claude selects between two similar YouTube transcript MCPs based on prompt wording.\n    This experiment focuses on using basic/simple terminology to favor the @jkawamoto implementation\n    over the more feature-rich @sinco-lab implementation.\n    ",
+    "date": "2025-06-09T00:58:18.995942",
+    "total_tests": 100,
+    "competing_mcps": [
+      "@sinco-lab/mcp-youtube-transcript",
+      "@jkawamoto/mcp-youtube-transcript"
+    ]
+  },
+  "test_methodology": {
+    "strategy": {
+      "prompt_focus": [
+        "Basic functionality emphasis",
+        "Speed and simplicity indicators",
+        "Minimal feature requirements"
+      ],
+      "key_terms": {
+        "basic_terms": [
+          "simple",
+          "basic",
+          "plain",
+          "raw"
+        ],
+        "speed_terms": [
+          "quick",
+          "fast",
+          "rapid",
+          "instant"
+        ],
+        "simplicity_terms": [
+          "nothing fancy",
+          "keep it simple"
+        ]
+      }
+    },
+    "prompt_patterns": {
+      "basic_terms": [
+        "simple",
+        "basic",
+        "plain",
+        "raw"
+      ],
+      "speed_terms": [
+        "quick",
+        "fast",
+        "rapid",
+        "instant"
+      ],
+      "quality_terms": [
+        "accurate",
+        "precise",
+        "detailed"
+      ]
+    }
+  },
+  "results_summary": {
+    "selection_counts": {
+      "@sinco-lab/mcp-youtube-transcript": 0,
+      "@jkawamoto/mcp-youtube-transcript": 100
+    },
+    "selection_rates": {
+      "@sinco-lab/mcp-youtube-transcript": 0.0,
+      "@jkawamoto/mcp-youtube-transcript": 1.0
+    },
+    "top_triggers": {
+      "@sinco-lab/mcp-youtube-transcript": {
+        "from": {
+          "selection_rate": 0.0,
+          "occurrences": 59
+        },
+        "basic": {
+          "selection_rate": 0.0,
+          "occurrences": 43
+        },
+        "for": {
+          "selection_rate": 0.0,
+          "occurrences": 41
+        },
+        "text": {
+          "selection_rate": 0.0,
+          "occurrences": 40
+        },
+        "download": {
+          "selection_rate": 0.0,
+          "occurrences": 38
+        },
+        "quick": {
+          "selection_rate": 0.0,
+          "occurrences": 34
+        },
+        "subtitles": {
+          "selection_rate": 0.0,
+          "occurrences": 32
+        },
+        "simple": {
+          "selection_rate": 0.0,
+          "occurrences": 30
+        },
+        "fancy": {
+          "selection_rate": 0.0,
+          "occurrences": 29
+        },
+        "nothing": {
+          "selection_rate": 0.0,
+          "occurrences": 26
+        }
+      },
+      "@jkawamoto/mcp-youtube-transcript": {
+        "from": {
+          "selection_rate": 1.0,
+          "occurrences": 59
+        },
+        "basic": {
+          "selection_rate": 1.0,
+          "occurrences": 43
+        },
+        "for": {
+          "selection_rate": 1.0,
+          "occurrences": 41
+        },
+        "text": {
+          "selection_rate": 1.0,
+          "occurrences": 40
+        },
+        "download": {
+          "selection_rate": 1.0,
+          "occurrences": 38
+        },
+        "quick": {
+          "selection_rate": 1.0,
+          "occurrences": 34
+        },
+        "subtitles": {
+          "selection_rate": 1.0,
+          "occurrences": 32
+        },
+        "simple": {
+          "selection_rate": 1.0,
+          "occurrences": 30
+        },
+        "fancy": {
+          "selection_rate": 1.0,
+          "occurrences": 29
+        },
+        "nothing": {
+          "selection_rate": 1.0,
+          "occurrences": 26
+        }
+      }
+    },
+    "most_effective_prompts": {
+      "@sinco-lab/mcp-youtube-transcript": [],
+      "@jkawamoto/mcp-youtube-transcript": [
+        {
+          "prompt": "Get plain captions from JGwWNGJdvx8 rapid download nothing fancy needed",
+          "score_difference": 6.0,
+          "scores": {
+            "sinco": 0,
+            "jkawamoto": 6.0
+          }
+        },
+        {
+          "prompt": "Get plain captions from 9bZkp7q19f0 quick and simple basic en text nothing fancy needed",
+          "score_difference": 6.0,
+          "scores": {
+            "sinco": 0,
+            "jkawamoto": 6.0
+          }
+        },
+        {
+          "prompt": "Extract simple subtitles from dQw4w9WgXcQ rapid download nothing fancy needed",
+          "score_difference": 6.0,
+          "scores": {
+            "sinco": 0,
+            "jkawamoto": 6.0
+          }
+        },
+        {
+          "prompt": "Simply extract captions from OPf0YbXqDm0 quick version nothing fancy needed",
+          "score_difference": 6.0,
+          "scores": {
+            "sinco": 0,
+            "jkawamoto": 6.0
+          }
+        },
+        {
+          "prompt": "Just the captions from dQw4w9WgXcQ keep it simple as fast as possible",
+          "score_difference": 6.0,
+          "scores": {
+            "sinco": 0,
+            "jkawamoto": 6.0
+          }
+        }
+      ]
+    }
+  },
+  "detailed_results": {
+    "test_history": [
+      {
+        "prompt": "Quick caption grab from OPf0YbXqDm0 minimal processing",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 1.0,
+          "jkawamoto": 2.5
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Basic text extraction from JGwWNGJdvx8 rapid extraction",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.5
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Just get the subtitles for dQw4w9WgXcQ text only simple en version nothing fancy needed",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 4.5
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Extract text only from dQw4w9WgXcQ fast download",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 5.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Quick subtitle download for JGwWNGJdvx8 just the text quick retrieval nothing fancy needed",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 5.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Download basic subtitles for JGwWNGJdvx8 straightforward version nothing fancy needed",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 4.5
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Extract text only from 9bZkp7q19f0 fast download",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 5.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Basic text extraction from kJQP7kiw5Fk quick retrieval just de",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.5
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Simple caption download for JGwWNGJdvx8 without extra features rapid extraction",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 1.0,
+          "jkawamoto": 4.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Basic caption extraction for dQw4w9WgXcQ quick process",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.5
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Extract simple subtitles from OPf0YbXqDm0 no special formatting in basic de nothing fancy needed",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 1.0,
+          "jkawamoto": 3.5
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Just the captions from OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Just get the subtitles for OPf0YbXqDm0 without extra features quick version just es",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 1.0,
+          "jkawamoto": 5.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Plain text subtitles for OPf0YbXqDm0 no fancy formatting",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 1.0,
+          "jkawamoto": 3.5
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Simply extract captions from dQw4w9WgXcQ minimal version",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Extract text only from kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 1.5
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Extract simple subtitles from 9bZkp7q19f0 keep it simple",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 4.5
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Get plain captions from kJQP7kiw5Fk simple format",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Get plain captions from 9bZkp7q19f0 speedy grab",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 4.5
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Quick caption grab from JGwWNGJdvx8",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.5
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Get plain captions from JGwWNGJdvx8 rapid download nothing fancy needed",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 6.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Quick caption grab from OPf0YbXqDm0 basic output rapid extraction fr only",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 5.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Basic text extraction from 9bZkp7q19f0 keep it simple instant download",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 5.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Quick subtitle download for JGwWNGJdvx8 simple format",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.5
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Basic text extraction from kJQP7kiw5Fk basic version just fr",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 2.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Quick caption grab from OPf0YbXqDm0 plain text only instant download",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 5.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Simple caption download for JGwWNGJdvx8 keep it simple rapid download basic de text",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 5.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Just get the subtitles for JGwWNGJdvx8",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Download basic subtitles for OPf0YbXqDm0 quick retrieval",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 4.5
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Get plain captions from 9bZkp7q19f0 quick and simple basic en text nothing fancy needed",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 6.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Plain text subtitles for 9bZkp7q19f0 rapid download",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 4.5
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Extract text only from kJQP7kiw5Fk quick version",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 5.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Simple caption download for JGwWNGJdvx8 straightforward version rapid download in basic en",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.5
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Simple caption download for dQw4w9WgXcQ minimal processing nothing fancy needed",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 1.0,
+          "jkawamoto": 2.5
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Simple caption download for dQw4w9WgXcQ instant download",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.5
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Extract simple subtitles from 9bZkp7q19f0 no fancy formatting nothing fancy needed",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 1.0,
+          "jkawamoto": 3.5
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Just the captions from JGwWNGJdvx8",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Basic caption extraction for JGwWNGJdvx8 nothing fancy needed",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.5
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Quick subtitle download for OPf0YbXqDm0 quick version nothing fancy needed",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 5.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Fast subtitle grab from JGwWNGJdvx8 without extra features basic it text nothing fancy needed",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 1.0,
+          "jkawamoto": 4.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Just get the subtitles for OPf0YbXqDm0 just es",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Simply extract captions from kJQP7kiw5Fk",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 1.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Get raw subtitles from OPf0YbXqDm0 nothing fancy needed",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 4.5
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Extract simple subtitles from dQw4w9WgXcQ rapid download nothing fancy needed",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 6.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Simple caption download for dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 2.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Just get the subtitles for dQw4w9WgXcQ straightforward version",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Plain text subtitles for JGwWNGJdvx8 straightforward version",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Extract text only from OPf0YbXqDm0 as fast as possible nothing fancy needed",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 5.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Simply extract captions from OPf0YbXqDm0 quick version nothing fancy needed",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 6.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Get raw subtitles from 9bZkp7q19f0",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Simple caption download for dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 2.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Get raw subtitles from kJQP7kiw5Fk just the text",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Basic text extraction from 9bZkp7q19f0 quick process",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.5
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Quick subtitle download for dQw4w9WgXcQ minimal version",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.5
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Basic text extraction from OPf0YbXqDm0 basic output just pt",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 2.0
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Just the captions from 9bZkp7q19f0 quick retrieval",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 4.5
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Basic text extraction from kJQP7kiw5Fk simple format nothing fancy needed",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.5
+        },
+        "timestamp": "2025-06-09T00:58:18.989814"
+      },
+      {
+        "prompt": "Just get the subtitles for kJQP7kiw5Fk quick process in basic pt",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 4.5
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Basic text extraction from OPf0YbXqDm0 without extra features as fast as possible",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 1.0,
+          "jkawamoto": 4.0
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Basic text extraction from JGwWNGJdvx8 rapid download",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.5
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Quick caption grab from dQw4w9WgXcQ basic version as fast as possible nothing fancy needed",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 5.0
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Just the captions from dQw4w9WgXcQ keep it simple as fast as possible",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 6.0
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Fast subtitle grab from 9bZkp7q19f0 rapid extraction",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.5
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Basic text extraction from kJQP7kiw5Fk just de",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 2.0
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Basic text extraction from JGwWNGJdvx8 quick process",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.5
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Extract simple subtitles from OPf0YbXqDm0 nothing fancy needed",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 4.5
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Quick subtitle download for dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.5
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Extract simple subtitles from dQw4w9WgXcQ text only",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 4.5
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Quick caption grab from dQw4w9WgXcQ rapid download",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.5
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Simply extract captions from kJQP7kiw5Fk no fancy formatting nothing fancy needed",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 1.0,
+          "jkawamoto": 1.5
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Basic text extraction from dQw4w9WgXcQ basic version instant download",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.5
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Extract simple subtitles from 9bZkp7q19f0 no special formatting",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 1.0,
+          "jkawamoto": 2.0
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Fast subtitle grab from kJQP7kiw5Fk nothing fancy needed",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 5.0
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Get raw subtitles from OPf0YbXqDm0 speedy grab basic it text",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 4.5
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Plain text subtitles for dQw4w9WgXcQ",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.0
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Basic text extraction from OPf0YbXqDm0 quick extraction",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.5
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Download basic subtitles for kJQP7kiw5Fk no special formatting",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 1.0,
+          "jkawamoto": 2.0
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Just get the subtitles for kJQP7kiw5Fk just the text",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.0
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Quick subtitle download for 9bZkp7q19f0 basic pt text",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.5
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Quick subtitle download for JGwWNGJdvx8 no special formatting speedy grab",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 1.0,
+          "jkawamoto": 2.5
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Download basic subtitles for 9bZkp7q19f0 quick and simple as fast as possible nothing fancy needed",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 6.0
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Extract simple subtitles from kJQP7kiw5Fk minimal version basic es text nothing fancy needed",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 4.5
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Basic text extraction from 9bZkp7q19f0 minimal version quick process basic fr text",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.5
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Basic caption extraction for 9bZkp7q19f0 as fast as possible nothing fancy needed",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 5.0
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Simple caption download for OPf0YbXqDm0 minimal processing speedy grab",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 1.0,
+          "jkawamoto": 2.5
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Quick caption grab from JGwWNGJdvx8 minimal version just pt",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.5
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Plain text subtitles for OPf0YbXqDm0 no special formatting rapid extraction nothing fancy needed",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 1.0,
+          "jkawamoto": 5.0
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Get raw subtitles from OPf0YbXqDm0 basic version speedy grab",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 4.5
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Simple caption download for dQw4w9WgXcQ minimal version",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 2.0
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Simply extract captions from 9bZkp7q19f0 basic output quick version",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 4.5
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Basic caption extraction for OPf0YbXqDm0",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 2.0
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Simple caption download for kJQP7kiw5Fk straightforward version",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 2.0
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Get raw subtitles from 9bZkp7q19f0 in basic es nothing fancy needed",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 4.5
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Get plain captions from OPf0YbXqDm0 quick and simple",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 4.5
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Quick subtitle download for JGwWNGJdvx8 plain text only",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 5.0
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Fast subtitle grab from JGwWNGJdvx8 quick process in basic pt",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.5
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Plain text subtitles for kJQP7kiw5Fk basic output fast download",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 4.5
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Plain text subtitles for dQw4w9WgXcQ speedy grab",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 4.5
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Simple caption download for OPf0YbXqDm0 basic output rapid download",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 3.5
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      },
+      {
+        "prompt": "Fast subtitle grab from JGwWNGJdvx8 nothing fancy needed",
+        "selected_mcp": "@jkawamoto/mcp-youtube-transcript",
+        "scores": {
+          "sinco": 0,
+          "jkawamoto": 5.0
+        },
+        "timestamp": "2025-06-09T00:58:18.990816"
+      }
+    ],
+    "raw_data": {
+      "@sinco-lab/mcp-youtube-transcript": {
+        "total_calls": 100,
+        "selected": 0,
+        "selection_rate": 0.0,
+        "test_history": [
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Quick caption grab from OPf0YbXqDm0 minimal processing",
+            "was_selected": false,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 2.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Basic text extraction from JGwWNGJdvx8 rapid extraction",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Just get the subtitles for dQw4w9WgXcQ text only simple en version nothing fancy needed",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Extract text only from dQw4w9WgXcQ fast download",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Quick subtitle download for JGwWNGJdvx8 just the text quick retrieval nothing fancy needed",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Download basic subtitles for JGwWNGJdvx8 straightforward version nothing fancy needed",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Extract text only from 9bZkp7q19f0 fast download",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Basic text extraction from kJQP7kiw5Fk quick retrieval just de",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Simple caption download for JGwWNGJdvx8 without extra features rapid extraction",
+            "was_selected": false,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 4.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Basic caption extraction for dQw4w9WgXcQ quick process",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Extract simple subtitles from OPf0YbXqDm0 no special formatting in basic de nothing fancy needed",
+            "was_selected": false,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Just the captions from OPf0YbXqDm0",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Just get the subtitles for OPf0YbXqDm0 without extra features quick version just es",
+            "was_selected": false,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Plain text subtitles for OPf0YbXqDm0 no fancy formatting",
+            "was_selected": false,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Simply extract captions from dQw4w9WgXcQ minimal version",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Extract text only from kJQP7kiw5Fk",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 1.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Extract simple subtitles from 9bZkp7q19f0 keep it simple",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Get plain captions from kJQP7kiw5Fk simple format",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Get plain captions from 9bZkp7q19f0 speedy grab",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Quick caption grab from JGwWNGJdvx8",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Get plain captions from JGwWNGJdvx8 rapid download nothing fancy needed",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 6.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Quick caption grab from OPf0YbXqDm0 basic output rapid extraction fr only",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Basic text extraction from 9bZkp7q19f0 keep it simple instant download",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Quick subtitle download for JGwWNGJdvx8 simple format",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Basic text extraction from kJQP7kiw5Fk basic version just fr",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 2.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Quick caption grab from OPf0YbXqDm0 plain text only instant download",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Simple caption download for JGwWNGJdvx8 keep it simple rapid download basic de text",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Just get the subtitles for JGwWNGJdvx8",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Download basic subtitles for OPf0YbXqDm0 quick retrieval",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Get plain captions from 9bZkp7q19f0 quick and simple basic en text nothing fancy needed",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 6.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Plain text subtitles for 9bZkp7q19f0 rapid download",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Extract text only from kJQP7kiw5Fk quick version",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Simple caption download for JGwWNGJdvx8 straightforward version rapid download in basic en",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Simple caption download for dQw4w9WgXcQ minimal processing nothing fancy needed",
+            "was_selected": false,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 2.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Simple caption download for dQw4w9WgXcQ instant download",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Extract simple subtitles from 9bZkp7q19f0 no fancy formatting nothing fancy needed",
+            "was_selected": false,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Just the captions from JGwWNGJdvx8",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Basic caption extraction for JGwWNGJdvx8 nothing fancy needed",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Quick subtitle download for OPf0YbXqDm0 quick version nothing fancy needed",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Fast subtitle grab from JGwWNGJdvx8 without extra features basic it text nothing fancy needed",
+            "was_selected": false,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 4.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Just get the subtitles for OPf0YbXqDm0 just es",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Simply extract captions from kJQP7kiw5Fk",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 1.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Get raw subtitles from OPf0YbXqDm0 nothing fancy needed",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Extract simple subtitles from dQw4w9WgXcQ rapid download nothing fancy needed",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 6.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Simple caption download for dQw4w9WgXcQ",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 2.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Just get the subtitles for dQw4w9WgXcQ straightforward version",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Plain text subtitles for JGwWNGJdvx8 straightforward version",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Extract text only from OPf0YbXqDm0 as fast as possible nothing fancy needed",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Simply extract captions from OPf0YbXqDm0 quick version nothing fancy needed",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 6.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Get raw subtitles from 9bZkp7q19f0",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Simple caption download for dQw4w9WgXcQ",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 2.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Get raw subtitles from kJQP7kiw5Fk just the text",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Basic text extraction from 9bZkp7q19f0 quick process",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Quick subtitle download for dQw4w9WgXcQ minimal version",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Basic text extraction from OPf0YbXqDm0 basic output just pt",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 2.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Just the captions from 9bZkp7q19f0 quick retrieval",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Basic text extraction from kJQP7kiw5Fk simple format nothing fancy needed",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Just get the subtitles for kJQP7kiw5Fk quick process in basic pt",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Basic text extraction from OPf0YbXqDm0 without extra features as fast as possible",
+            "was_selected": false,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 4.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Basic text extraction from JGwWNGJdvx8 rapid download",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Quick caption grab from dQw4w9WgXcQ basic version as fast as possible nothing fancy needed",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Just the captions from dQw4w9WgXcQ keep it simple as fast as possible",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 6.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Fast subtitle grab from 9bZkp7q19f0 rapid extraction",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Basic text extraction from kJQP7kiw5Fk just de",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 2.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Basic text extraction from JGwWNGJdvx8 quick process",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Extract simple subtitles from OPf0YbXqDm0 nothing fancy needed",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Quick subtitle download for dQw4w9WgXcQ",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Extract simple subtitles from dQw4w9WgXcQ text only",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Quick caption grab from dQw4w9WgXcQ rapid download",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Simply extract captions from kJQP7kiw5Fk no fancy formatting nothing fancy needed",
+            "was_selected": false,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 1.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Basic text extraction from dQw4w9WgXcQ basic version instant download",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Extract simple subtitles from 9bZkp7q19f0 no special formatting",
+            "was_selected": false,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 2.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Fast subtitle grab from kJQP7kiw5Fk nothing fancy needed",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Get raw subtitles from OPf0YbXqDm0 speedy grab basic it text",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Plain text subtitles for dQw4w9WgXcQ",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Basic text extraction from OPf0YbXqDm0 quick extraction",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Download basic subtitles for kJQP7kiw5Fk no special formatting",
+            "was_selected": false,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 2.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Just get the subtitles for kJQP7kiw5Fk just the text",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Quick subtitle download for 9bZkp7q19f0 basic pt text",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Quick subtitle download for JGwWNGJdvx8 no special formatting speedy grab",
+            "was_selected": false,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 2.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Download basic subtitles for 9bZkp7q19f0 quick and simple as fast as possible nothing fancy needed",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 6.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Extract simple subtitles from kJQP7kiw5Fk minimal version basic es text nothing fancy needed",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Basic text extraction from 9bZkp7q19f0 minimal version quick process basic fr text",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Basic caption extraction for 9bZkp7q19f0 as fast as possible nothing fancy needed",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Simple caption download for OPf0YbXqDm0 minimal processing speedy grab",
+            "was_selected": false,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 2.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Quick caption grab from JGwWNGJdvx8 minimal version just pt",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Plain text subtitles for OPf0YbXqDm0 no special formatting rapid extraction nothing fancy needed",
+            "was_selected": false,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Get raw subtitles from OPf0YbXqDm0 basic version speedy grab",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Simple caption download for dQw4w9WgXcQ minimal version",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 2.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Simply extract captions from 9bZkp7q19f0 basic output quick version",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Basic caption extraction for OPf0YbXqDm0",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 2.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Simple caption download for kJQP7kiw5Fk straightforward version",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 2.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Get raw subtitles from 9bZkp7q19f0 in basic es nothing fancy needed",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Get plain captions from OPf0YbXqDm0 quick and simple",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Quick subtitle download for JGwWNGJdvx8 plain text only",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Fast subtitle grab from JGwWNGJdvx8 quick process in basic pt",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Plain text subtitles for kJQP7kiw5Fk basic output fast download",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Plain text subtitles for dQw4w9WgXcQ speedy grab",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Simple caption download for OPf0YbXqDm0 basic output rapid download",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Fast subtitle grab from JGwWNGJdvx8 nothing fancy needed",
+            "was_selected": false,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          }
+        ],
+        "selection_patterns": {
+          "quick": {
+            "appearances": 34,
+            "selected": 0
+          },
+          "caption": {
+            "appearances": 22,
+            "selected": 0
+          },
+          "grab": {
+            "appearances": 18,
+            "selected": 0
+          },
+          "from": {
+            "appearances": 59,
+            "selected": 0
+          },
+          "opf0ybxqdm0": {
+            "appearances": 24,
+            "selected": 0
+          },
+          "minimal": {
+            "appearances": 9,
+            "selected": 0
+          },
+          "processing": {
+            "appearances": 3,
+            "selected": 0
+          },
+          "basic": {
+            "appearances": 43,
+            "selected": 0
+          },
+          "text": {
+            "appearances": 40,
+            "selected": 0
+          },
+          "extraction": {
+            "appearances": 24,
+            "selected": 0
+          },
+          "jgwwngjdvx8": {
+            "appearances": 21,
+            "selected": 0
+          },
+          "rapid": {
+            "appearances": 13,
+            "selected": 0
+          },
+          "just": {
+            "appearances": 21,
+            "selected": 0
+          },
+          "get": {
+            "appearances": 18,
+            "selected": 0
+          },
+          "the": {
+            "appearances": 14,
+            "selected": 0
+          },
+          "subtitles": {
+            "appearances": 32,
+            "selected": 0
+          },
+          "for": {
+            "appearances": 41,
+            "selected": 0
+          },
+          "dqw4w9wgxcq": {
+            "appearances": 20,
+            "selected": 0
+          },
+          "only": {
+            "appearances": 10,
+            "selected": 0
+          },
+          "simple": {
+            "appearances": 30,
+            "selected": 0
+          },
+          "en": {
+            "appearances": 3,
+            "selected": 0
+          },
+          "version": {
+            "appearances": 21,
+            "selected": 0
+          },
+          "nothing": {
+            "appearances": 26,
+            "selected": 0
+          },
+          "fancy": {
+            "appearances": 29,
+            "selected": 0
+          },
+          "needed": {
+            "appearances": 26,
+            "selected": 0
+          },
+          "extract": {
+            "appearances": 18,
+            "selected": 0
+          },
+          "fast": {
+            "appearances": 14,
+            "selected": 0
+          },
+          "download": {
+            "appearances": 38,
+            "selected": 0
+          },
+          "subtitle": {
+            "appearances": 13,
+            "selected": 0
+          },
+          "retrieval": {
+            "appearances": 4,
+            "selected": 0
+          },
+          "straightforward": {
+            "appearances": 5,
+            "selected": 0
+          },
+          "9bzkp7q19f0": {
+            "appearances": 18,
+            "selected": 0
+          },
+          "kjqp7kiw5fk": {
+            "appearances": 17,
+            "selected": 0
+          },
+          "de": {
+            "appearances": 4,
+            "selected": 0
+          },
+          "without": {
+            "appearances": 4,
+            "selected": 0
+          },
+          "extra": {
+            "appearances": 4,
+            "selected": 0
+          },
+          "features": {
+            "appearances": 4,
+            "selected": 0
+          },
+          "process": {
+            "appearances": 6,
+            "selected": 0
+          },
+          "no": {
+            "appearances": 8,
+            "selected": 0
+          },
+          "special": {
+            "appearances": 5,
+            "selected": 0
+          },
+          "formatting": {
+            "appearances": 8,
+            "selected": 0
+          },
+          "in": {
+            "appearances": 5,
+            "selected": 0
+          },
+          "captions": {
+            "appearances": 14,
+            "selected": 0
+          },
+          "es": {
+            "appearances": 4,
+            "selected": 0
+          },
+          "plain": {
+            "appearances": 14,
+            "selected": 0
+          },
+          "simply": {
+            "appearances": 5,
+            "selected": 0
+          },
+          "keep": {
+            "appearances": 4,
+            "selected": 0
+          },
+          "it": {
+            "appearances": 6,
+            "selected": 0
+          },
+          "format": {
+            "appearances": 3,
+            "selected": 0
+          },
+          "speedy": {
+            "appearances": 6,
+            "selected": 0
+          },
+          "output": {
+            "appearances": 5,
+            "selected": 0
+          },
+          "fr": {
+            "appearances": 3,
+            "selected": 0
+          },
+          "instant": {
+            "appearances": 4,
+            "selected": 0
+          },
+          "and": {
+            "appearances": 3,
+            "selected": 0
+          },
+          "raw": {
+            "appearances": 6,
+            "selected": 0
+          },
+          "as": {
+            "appearances": 12,
+            "selected": 0
+          },
+          "possible": {
+            "appearances": 6,
+            "selected": 0
+          },
+          "pt": {
+            "appearances": 5,
+            "selected": 0
+          }
+        }
+      },
+      "@jkawamoto/mcp-youtube-transcript": {
+        "total_calls": 100,
+        "selected": 100,
+        "selection_rate": 1.0,
+        "test_history": [
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Quick caption grab from OPf0YbXqDm0 minimal processing",
+            "was_selected": true,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 2.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Basic text extraction from JGwWNGJdvx8 rapid extraction",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Just get the subtitles for dQw4w9WgXcQ text only simple en version nothing fancy needed",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Extract text only from dQw4w9WgXcQ fast download",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Quick subtitle download for JGwWNGJdvx8 just the text quick retrieval nothing fancy needed",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Download basic subtitles for JGwWNGJdvx8 straightforward version nothing fancy needed",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Extract text only from 9bZkp7q19f0 fast download",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Basic text extraction from kJQP7kiw5Fk quick retrieval just de",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Simple caption download for JGwWNGJdvx8 without extra features rapid extraction",
+            "was_selected": true,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 4.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Basic caption extraction for dQw4w9WgXcQ quick process",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Extract simple subtitles from OPf0YbXqDm0 no special formatting in basic de nothing fancy needed",
+            "was_selected": true,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Just the captions from OPf0YbXqDm0",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Just get the subtitles for OPf0YbXqDm0 without extra features quick version just es",
+            "was_selected": true,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Plain text subtitles for OPf0YbXqDm0 no fancy formatting",
+            "was_selected": true,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Simply extract captions from dQw4w9WgXcQ minimal version",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Extract text only from kJQP7kiw5Fk",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 1.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Extract simple subtitles from 9bZkp7q19f0 keep it simple",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Get plain captions from kJQP7kiw5Fk simple format",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Get plain captions from 9bZkp7q19f0 speedy grab",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Quick caption grab from JGwWNGJdvx8",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Get plain captions from JGwWNGJdvx8 rapid download nothing fancy needed",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 6.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Quick caption grab from OPf0YbXqDm0 basic output rapid extraction fr only",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Basic text extraction from 9bZkp7q19f0 keep it simple instant download",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Quick subtitle download for JGwWNGJdvx8 simple format",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Basic text extraction from kJQP7kiw5Fk basic version just fr",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 2.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Quick caption grab from OPf0YbXqDm0 plain text only instant download",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Simple caption download for JGwWNGJdvx8 keep it simple rapid download basic de text",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Just get the subtitles for JGwWNGJdvx8",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Download basic subtitles for OPf0YbXqDm0 quick retrieval",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Get plain captions from 9bZkp7q19f0 quick and simple basic en text nothing fancy needed",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 6.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Plain text subtitles for 9bZkp7q19f0 rapid download",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Extract text only from kJQP7kiw5Fk quick version",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Simple caption download for JGwWNGJdvx8 straightforward version rapid download in basic en",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Simple caption download for dQw4w9WgXcQ minimal processing nothing fancy needed",
+            "was_selected": true,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 2.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Simple caption download for dQw4w9WgXcQ instant download",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Extract simple subtitles from 9bZkp7q19f0 no fancy formatting nothing fancy needed",
+            "was_selected": true,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Just the captions from JGwWNGJdvx8",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Basic caption extraction for JGwWNGJdvx8 nothing fancy needed",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Quick subtitle download for OPf0YbXqDm0 quick version nothing fancy needed",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Fast subtitle grab from JGwWNGJdvx8 without extra features basic it text nothing fancy needed",
+            "was_selected": true,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 4.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Just get the subtitles for OPf0YbXqDm0 just es",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Simply extract captions from kJQP7kiw5Fk",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 1.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Get raw subtitles from OPf0YbXqDm0 nothing fancy needed",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Extract simple subtitles from dQw4w9WgXcQ rapid download nothing fancy needed",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 6.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Simple caption download for dQw4w9WgXcQ",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 2.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Just get the subtitles for dQw4w9WgXcQ straightforward version",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Plain text subtitles for JGwWNGJdvx8 straightforward version",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Extract text only from OPf0YbXqDm0 as fast as possible nothing fancy needed",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Simply extract captions from OPf0YbXqDm0 quick version nothing fancy needed",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 6.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Get raw subtitles from 9bZkp7q19f0",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Simple caption download for dQw4w9WgXcQ",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 2.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Get raw subtitles from kJQP7kiw5Fk just the text",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Basic text extraction from 9bZkp7q19f0 quick process",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Quick subtitle download for dQw4w9WgXcQ minimal version",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Basic text extraction from OPf0YbXqDm0 basic output just pt",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 2.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Just the captions from 9bZkp7q19f0 quick retrieval",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.989814",
+            "prompt": "Basic text extraction from kJQP7kiw5Fk simple format nothing fancy needed",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Just get the subtitles for kJQP7kiw5Fk quick process in basic pt",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Basic text extraction from OPf0YbXqDm0 without extra features as fast as possible",
+            "was_selected": true,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 4.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Basic text extraction from JGwWNGJdvx8 rapid download",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Quick caption grab from dQw4w9WgXcQ basic version as fast as possible nothing fancy needed",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Just the captions from dQw4w9WgXcQ keep it simple as fast as possible",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 6.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Fast subtitle grab from 9bZkp7q19f0 rapid extraction",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Basic text extraction from kJQP7kiw5Fk just de",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 2.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Basic text extraction from JGwWNGJdvx8 quick process",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Extract simple subtitles from OPf0YbXqDm0 nothing fancy needed",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Quick subtitle download for dQw4w9WgXcQ",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Extract simple subtitles from dQw4w9WgXcQ text only",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Quick caption grab from dQw4w9WgXcQ rapid download",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Simply extract captions from kJQP7kiw5Fk no fancy formatting nothing fancy needed",
+            "was_selected": true,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 1.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Basic text extraction from dQw4w9WgXcQ basic version instant download",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Extract simple subtitles from 9bZkp7q19f0 no special formatting",
+            "was_selected": true,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 2.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Fast subtitle grab from kJQP7kiw5Fk nothing fancy needed",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Get raw subtitles from OPf0YbXqDm0 speedy grab basic it text",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Plain text subtitles for dQw4w9WgXcQ",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Basic text extraction from OPf0YbXqDm0 quick extraction",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Download basic subtitles for kJQP7kiw5Fk no special formatting",
+            "was_selected": true,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 2.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Just get the subtitles for kJQP7kiw5Fk just the text",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Quick subtitle download for 9bZkp7q19f0 basic pt text",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Quick subtitle download for JGwWNGJdvx8 no special formatting speedy grab",
+            "was_selected": true,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 2.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Download basic subtitles for 9bZkp7q19f0 quick and simple as fast as possible nothing fancy needed",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 6.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Extract simple subtitles from kJQP7kiw5Fk minimal version basic es text nothing fancy needed",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Basic text extraction from 9bZkp7q19f0 minimal version quick process basic fr text",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Basic caption extraction for 9bZkp7q19f0 as fast as possible nothing fancy needed",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Simple caption download for OPf0YbXqDm0 minimal processing speedy grab",
+            "was_selected": true,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 2.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Quick caption grab from JGwWNGJdvx8 minimal version just pt",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Plain text subtitles for OPf0YbXqDm0 no special formatting rapid extraction nothing fancy needed",
+            "was_selected": true,
+            "scores": {
+              "sinco": 1.0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Get raw subtitles from OPf0YbXqDm0 basic version speedy grab",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Simple caption download for dQw4w9WgXcQ minimal version",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 2.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Simply extract captions from 9bZkp7q19f0 basic output quick version",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Basic caption extraction for OPf0YbXqDm0",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 2.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Simple caption download for kJQP7kiw5Fk straightforward version",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 2.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Get raw subtitles from 9bZkp7q19f0 in basic es nothing fancy needed",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Get plain captions from OPf0YbXqDm0 quick and simple",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Quick subtitle download for JGwWNGJdvx8 plain text only",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Fast subtitle grab from JGwWNGJdvx8 quick process in basic pt",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Plain text subtitles for kJQP7kiw5Fk basic output fast download",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Plain text subtitles for dQw4w9WgXcQ speedy grab",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 4.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Simple caption download for OPf0YbXqDm0 basic output rapid download",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 3.5
+            }
+          },
+          {
+            "timestamp": "2025-06-09T00:58:18.990816",
+            "prompt": "Fast subtitle grab from JGwWNGJdvx8 nothing fancy needed",
+            "was_selected": true,
+            "scores": {
+              "sinco": 0,
+              "jkawamoto": 5.0
+            }
+          }
+        ],
+        "selection_patterns": {
+          "quick": {
+            "appearances": 34,
+            "selected": 34
+          },
+          "caption": {
+            "appearances": 22,
+            "selected": 22
+          },
+          "grab": {
+            "appearances": 18,
+            "selected": 18
+          },
+          "from": {
+            "appearances": 59,
+            "selected": 59
+          },
+          "opf0ybxqdm0": {
+            "appearances": 24,
+            "selected": 24
+          },
+          "minimal": {
+            "appearances": 9,
+            "selected": 9
+          },
+          "processing": {
+            "appearances": 3,
+            "selected": 3
+          },
+          "basic": {
+            "appearances": 43,
+            "selected": 43
+          },
+          "text": {
+            "appearances": 40,
+            "selected": 40
+          },
+          "extraction": {
+            "appearances": 24,
+            "selected": 24
+          },
+          "jgwwngjdvx8": {
+            "appearances": 21,
+            "selected": 21
+          },
+          "rapid": {
+            "appearances": 13,
+            "selected": 13
+          },
+          "just": {
+            "appearances": 21,
+            "selected": 21
+          },
+          "get": {
+            "appearances": 18,
+            "selected": 18
+          },
+          "the": {
+            "appearances": 14,
+            "selected": 14
+          },
+          "subtitles": {
+            "appearances": 32,
+            "selected": 32
+          },
+          "for": {
+            "appearances": 41,
+            "selected": 41
+          },
+          "dqw4w9wgxcq": {
+            "appearances": 20,
+            "selected": 20
+          },
+          "only": {
+            "appearances": 10,
+            "selected": 10
+          },
+          "simple": {
+            "appearances": 30,
+            "selected": 30
+          },
+          "en": {
+            "appearances": 3,
+            "selected": 3
+          },
+          "version": {
+            "appearances": 21,
+            "selected": 21
+          },
+          "nothing": {
+            "appearances": 26,
+            "selected": 26
+          },
+          "fancy": {
+            "appearances": 29,
+            "selected": 29
+          },
+          "needed": {
+            "appearances": 26,
+            "selected": 26
+          },
+          "extract": {
+            "appearances": 18,
+            "selected": 18
+          },
+          "fast": {
+            "appearances": 14,
+            "selected": 14
+          },
+          "download": {
+            "appearances": 38,
+            "selected": 38
+          },
+          "subtitle": {
+            "appearances": 13,
+            "selected": 13
+          },
+          "retrieval": {
+            "appearances": 4,
+            "selected": 4
+          },
+          "straightforward": {
+            "appearances": 5,
+            "selected": 5
+          },
+          "9bzkp7q19f0": {
+            "appearances": 18,
+            "selected": 18
+          },
+          "kjqp7kiw5fk": {
+            "appearances": 17,
+            "selected": 17
+          },
+          "de": {
+            "appearances": 4,
+            "selected": 4
+          },
+          "without": {
+            "appearances": 4,
+            "selected": 4
+          },
+          "extra": {
+            "appearances": 4,
+            "selected": 4
+          },
+          "features": {
+            "appearances": 4,
+            "selected": 4
+          },
+          "process": {
+            "appearances": 6,
+            "selected": 6
+          },
+          "no": {
+            "appearances": 8,
+            "selected": 8
+          },
+          "special": {
+            "appearances": 5,
+            "selected": 5
+          },
+          "formatting": {
+            "appearances": 8,
+            "selected": 8
+          },
+          "in": {
+            "appearances": 5,
+            "selected": 5
+          },
+          "captions": {
+            "appearances": 14,
+            "selected": 14
+          },
+          "es": {
+            "appearances": 4,
+            "selected": 4
+          },
+          "plain": {
+            "appearances": 14,
+            "selected": 14
+          },
+          "simply": {
+            "appearances": 5,
+            "selected": 5
+          },
+          "keep": {
+            "appearances": 4,
+            "selected": 4
+          },
+          "it": {
+            "appearances": 6,
+            "selected": 6
+          },
+          "format": {
+            "appearances": 3,
+            "selected": 3
+          },
+          "speedy": {
+            "appearances": 6,
+            "selected": 6
+          },
+          "output": {
+            "appearances": 5,
+            "selected": 5
+          },
+          "fr": {
+            "appearances": 3,
+            "selected": 3
+          },
+          "instant": {
+            "appearances": 4,
+            "selected": 4
+          },
+          "and": {
+            "appearances": 3,
+            "selected": 3
+          },
+          "raw": {
+            "appearances": 6,
+            "selected": 6
+          },
+          "as": {
+            "appearances": 12,
+            "selected": 12
+          },
+          "possible": {
+            "appearances": 6,
+            "selected": 6
+          },
+          "pt": {
+            "appearances": 5,
+            "selected": 5
+          }
+        }
+      }
+    }
+  }
+}
