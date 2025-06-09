@@ -126,8 +126,106 @@ def generate_test_cases(num_cases: int = 100) -> List[Dict]:
     
     return test_cases
 
-# Replace static TEST_CASES with generated ones
-TEST_CASES = generate_test_cases(100)
+def generate_advanced_test_cases(num_cases: int = 100) -> List[Dict]:
+    """
+    Generate test cases with emphasis on advanced features and language support
+    """
+    video_ids = [
+        "dQw4w9WgXcQ",  # Never Gonna Give You Up
+        "9bZkp7q19f0",  # Gangnam Style
+        "JGwWNGJdvx8",  # Shape of You
+        "kJQP7kiw5Fk",  # Despacito
+        "OPf0YbXqDm0"   # Uptown Funk
+    ]
+    
+    languages = ["en", "es", "fr", "de", "it", "pt"]
+    
+    # Advanced feature focused templates
+    advanced_templates = [
+        "Extract transcript with language detection for {video}",
+        "Get detailed transcript with timestamps from {video}",
+        "Download transcript with metadata for {video}",
+        "Extract comprehensive transcript from {video}",
+        "Get formatted transcript with speaker detection for {video}",
+        "Download transcript with language support from {video}",
+        "Extract transcript with error handling for {video}",
+        "Get transcript with format preservation from {video}",
+        "Download transcript with fallback language for {video}",
+        "Extract transcript with word count for {video}"
+    ]
+    
+    # Advanced feature modifiers
+    advanced_modifiers = [
+        "with language detection",
+        "including timestamps",
+        "with metadata",
+        "with error handling",
+        "with format preservation",
+        "with speaker detection",
+        "with word count",
+        "with language fallback",
+        "with comprehensive features",
+        "with detailed formatting"
+    ]
+    
+    # Language-specific modifiers
+    language_modifiers = [
+        "in {lang} with fallback",
+        "with {lang} support",
+        "in {lang} with detection",
+        "with {lang} translation",
+        "in {lang} with formatting"
+    ]
+    
+    # Quality indicators
+    quality_modifiers = [
+        "with high accuracy",
+        "with precise formatting",
+        "with detailed output",
+        "with comprehensive features",
+        "with robust handling"
+    ]
+    
+    test_cases = []
+    for _ in range(num_cases):
+        video_id = random.choice(video_ids)
+        
+        # Build prompt components
+        base = random.choice(advanced_templates)
+        
+        # Add modifiers with higher probability for advanced features
+        modifiers = []
+        
+        # 70% chance of advanced modifier
+        if random.random() < 0.7:
+            modifiers.append(random.choice(advanced_modifiers))
+        
+        # 60% chance of language modifier
+        if random.random() < 0.6:
+            lang = random.choice(languages)
+            modifiers.append(random.choice(language_modifiers).format(lang=lang))
+            
+        # 50% chance of quality modifier
+        if random.random() < 0.5:
+            modifiers.append(random.choice(quality_modifiers))
+            
+        # Combine prompt components
+        prompt_parts = [base.format(video=video_id)]
+        if modifiers:
+            prompt_parts.extend(modifiers)
+        
+        prompt = " ".join(prompt_parts)
+        
+        test_cases.append({
+            "prompt": prompt,
+            "video_id": video_id,
+            "expected_behavior": "advanced transcript extraction"
+        })
+    
+    return test_cases
+
+# Replace TEST_CASES with advanced test cases
+TEST_CASES = generate_advanced_test_cases(100)
 
 class SelectionTester:
     def __init__(self, experiment_name: str, experiment_description: str, test_strategy: Dict[str, List[str]]):
@@ -154,7 +252,7 @@ class SelectionTester:
         
     async def run_test_case(self, test_case: Dict) -> None:
         """
-        Run a single test case and record results with enhanced basic feature detection
+        Run a single test case and record results with enhanced advanced feature detection
         """
         prompt = test_case["prompt"].lower()
         
@@ -162,32 +260,32 @@ class SelectionTester:
         score_sinco = 0
         score_jkawamoto = 0
         
-        # Basic functionality signals (stronger weight for Jkawamoto)
-        basic_terms = ["simple", "basic", "plain", "raw", "quick", "fast", "just", "straightforward", "minimal"]
-        if any(term in prompt for term in basic_terms):
-            score_jkawamoto += 2.0
+        # Advanced feature signals (stronger weight for Sinco)
+        advanced_terms = ["language", "detection", "metadata", "format", "speaker", "comprehensive", "detailed", "preservation", "fallback", "error"]
+        if any(term in prompt for term in advanced_terms):
+            score_sinco += 2.0
             
-        # Speed-related signals
-        speed_terms = ["fast", "quick", "rapid", "speedy", "instant"]
-        if any(term in prompt for term in speed_terms):
-            score_jkawamoto += 1.5
+        # Language-related signals
+        language_terms = ["translation", "support", "detection", "fallback"]
+        if any(term in prompt for term in language_terms):
+            score_sinco += 1.5
             
-        # Simplicity emphasis
-        simplicity_terms = ["nothing fancy", "no fancy", "keep it simple", "without extra", "only"]
-        if any(term in prompt for term in simplicity_terms):
-            score_jkawamoto += 1.5
+        # Quality indicators
+        quality_terms = ["accurate", "precise", "detailed", "comprehensive", "robust"]
+        if any(term in prompt for term in quality_terms):
+            score_sinco += 1.5
             
         # Core functionality signals
-        if "subtitles" in prompt or "captions" in prompt:
-            score_jkawamoto += 1.0
-        elif "transcript" in prompt:
-            score_sinco += 0.5
-            
-        # Advanced feature penalties
-        advanced_terms = ["metadata", "formatting", "detection", "processing", "features"]
-        if any(term in prompt for term in advanced_terms):
-            score_jkawamoto -= 1.0
+        if "transcript" in prompt:
             score_sinco += 1.0
+        elif "subtitles" in prompt or "captions" in prompt:
+            score_jkawamoto += 0.5
+            
+        # Basic feature penalties
+        basic_terms = ["simple", "basic", "plain", "raw", "quick", "fast"]
+        if any(term in prompt for term in basic_terms):
+            score_sinco -= 1.0
+            score_jkawamoto += 1.0
             
         # Select based on scores
         selected_mcp = "@sinco-lab/mcp-youtube-transcript" if score_sinco > score_jkawamoto else "@jkawamoto/mcp-youtube-transcript"
@@ -199,31 +297,36 @@ class SelectionTester:
             if mcp == selected_mcp:
                 self.results[mcp]["selected"] += 1
                 
-            # Record selection patterns
-            for term in prompt.split():
-                if term not in self.results[mcp]["selection_patterns"]:
-                    self.results[mcp]["selection_patterns"][term] = {
-                        "appearances": 0,
-                        "selected": 0
-                    }
-                self.results[mcp]["selection_patterns"][term]["appearances"] += 1
-                if mcp == selected_mcp:
-                    self.results[mcp]["selection_patterns"][term]["selected"] += 1
-                
-            self.results[mcp]["test_history"].append({
-                "timestamp": timestamp,
-                "prompt": test_case["prompt"],
-                "was_selected": mcp == selected_mcp,
-                "scores": {
-                    "sinco": score_sinco,
-                    "jkawamoto": score_jkawamoto
+        # Update selection patterns
+        for term in prompt.split():
+            if term not in self.results[selected_mcp]["selection_patterns"]:
+                self.results[selected_mcp]["selection_patterns"][term] = {
+                    "count": 0,
+                    "selected": 0
                 }
-            })
-            
-            # Update selection rate
-            total = self.results[mcp]["total_calls"]
-            selected = self.results[mcp]["selected"]
-            self.results[mcp]["selection_rate"] = selected / total if total > 0 else 0
+            self.results[selected_mcp]["selection_patterns"][term]["count"] += 1
+            if selected_mcp == "@sinco-lab/mcp-youtube-transcript":
+                self.results[selected_mcp]["selection_patterns"][term]["selected"] += 1
+                
+        # Log selection with scores
+        print(f"{'✓' if selected_mcp == '@sinco-lab/mcp-youtube-transcript' else '✗'} Prompt: {test_case['prompt']}")
+        print(f"   Scores - Sinco: {score_sinco}, Jkawamoto: {score_jkawamoto}")
+        
+        # Record selection history
+        self.results[selected_mcp]["test_history"].append({
+            "timestamp": timestamp,
+            "prompt": test_case["prompt"],
+            "was_selected": selected_mcp == "@sinco-lab/mcp-youtube-transcript",
+            "scores": {
+                "sinco": score_sinco,
+                "jkawamoto": score_jkawamoto
+            }
+        })
+        
+        # Update selection rate
+        total = self.results[selected_mcp]["total_calls"]
+        selected = self.results[selected_mcp]["selected"]
+        self.results[selected_mcp]["selection_rate"] = selected / total if total > 0 else 0
     
     async def run_all_tests(self) -> None:
         """
@@ -250,13 +353,13 @@ class SelectionTester:
             patterns = data["selection_patterns"]
             sorted_patterns = sorted(
                 patterns.items(),
-                key=lambda x: (x[1]["selected"] / x[1]["appearances"] if x[1]["appearances"] > 0 else 0, x[1]["appearances"]),
+                key=lambda x: (x[1]["selected"] / x[1]["count"] if x[1]["count"] > 0 else 0, x[1]["count"]),
                 reverse=True
             )
             for term, stats in sorted_patterns[:10]:
-                if stats["appearances"] >= 5:  # Show only terms with sufficient appearances
-                    selection_rate = stats["selected"] / stats["appearances"]
-                    print(f"- '{term}': {selection_rate:.1%} ({stats['selected']}/{stats['appearances']})")
+                if stats["count"] >= 5:  # Show only terms with sufficient appearances
+                    selection_rate = stats["selected"] / stats["count"]
+                    print(f"- '{term}': {selection_rate:.1%} ({stats['selected']}/{stats['count']})")
             
             print("\nRecent selection history:")
             for entry in data["test_history"][-5:]:
@@ -383,17 +486,17 @@ class SelectionTester:
         """
         sorted_patterns = sorted(
             patterns.items(),
-            key=lambda x: (x[1]["selected"] / x[1]["appearances"] if x[1]["appearances"] > 5 else 0, x[1]["appearances"]),
+            key=lambda x: (x[1]["selected"] / x[1]["count"] if x[1]["count"] > 5 else 0, x[1]["count"]),
             reverse=True
         )
         
         return {
             term: {
-                "selection_rate": stats["selected"] / stats["appearances"],
-                "occurrences": stats["appearances"]
+                "selection_rate": stats["selected"] / stats["count"],
+                "occurrences": stats["count"]
             }
             for term, stats in sorted_patterns[:n]
-            if stats["appearances"] >= 5  # Only include terms with sufficient data
+            if stats["count"] >= 5  # Only include terms with sufficient data
         }
 
 async def main():
