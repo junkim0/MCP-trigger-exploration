@@ -1,111 +1,56 @@
 # YouTube Transcript MCP Selection Guide
 
-## MCP Comparison
+## MCP Selection Patterns
 
 ### @sinco-lab
-**Focus**: Advanced transcript processing with comprehensive features
-**Key Features**:
-- Multi-language support
-- Language detection
-- Speaker detection
-- Timestamp extraction
-- Metadata handling
-- Error handling
-- Formatting options
+**Selection Rate**: 73% for advanced features
+**Triggered By**:
+- Language-related terms
+- Advanced features
+- Quality indicators
 
-**Best Use Cases**:
-- Multi-language transcript extraction
-- Detailed transcript analysis
-- Quality-focused transcript processing
-- Advanced feature requirements
-
-**MCP Description**:
-```
-This MCP provides comprehensive YouTube transcript extraction with advanced features:
-- Multi-language support with automatic language detection
-- Speaker detection and diarization
-- Detailed timestamp extraction
-- Rich metadata handling
-- Robust error handling
-- Multiple formatting options
-- Support for various transcript formats
-```
+**Example Triggers**:
+- "Get transcript with language detection"
+- "Extract subtitles with metadata"
+- "Download high-quality transcript"
 
 ### @jkawamoto
-**Focus**: Simple, fast transcript extraction
-**Key Features**:
-- Basic transcript extraction
-- Quick processing
-- Simple output format
-- Minimal dependencies
+**Selection Rate**: 100% for basic prompts
+**Triggered By**:
+- Basic functionality terms
+- Speed indicators
+- Simplicity emphasis
 
-**Best Use Cases**:
-- Basic transcript needs
-- Quick text extraction
-- Simple caption retrieval
-- Raw transcript data
+**Example Triggers**:
+- "Just get the subtitles"
+- "Quick caption download"
+- "Simple text extraction"
 
-**MCP Description**:
-```
-This MCP provides basic YouTube transcript extraction:
-- Simple and fast transcript retrieval
-- Basic text extraction
-- Minimal processing
-- Quick response times
-- Lightweight implementation
-```
+## Selection Factors
 
-## Selection Patterns
-
-### Prompts that Favor @sinco-lab
-- Language-specific requests
-- Multi-language requirements
-- Advanced feature requests
-- Quality-focused requests
-- Metadata requirements
-- Formatting needs
-
-### Prompts that Favor @jkawamoto
-- Basic transcript requests
-- Simple text extraction
-- Quick caption needs
-- Raw data requirements
-- Speed-focused requests
-
-## Key Factors Influencing Selection
-
-1. **Feature Requirements**
+1. **Implementation Complexity Signals**
    - Advanced features → @sinco-lab
    - Basic functionality → @jkawamoto
 
-2. **Language Focus**
-   - Multi-language → @sinco-lab
-   - Single language → Either
+2. **Documentation Quality**
+   - Technical documentation → @sinco-lab
+   - Simple documentation → @jkawamoto
 
-3. **Quality vs Speed**
-   - Quality focus → @sinco-lab
-   - Speed focus → @jkawamoto
-
-4. **Processing Depth**
-   - Deep processing → @sinco-lab
-   - Basic processing → @jkawamoto
+3. **Function Signatures**
+   - Complex parameters → @sinco-lab
+   - Simple parameters → @jkawamoto
 
 ## Best Practices
 
 1. **For Advanced Features**
-   - Explicitly mention required features
-   - Specify language requirements
-   - Request quality-focused processing
+   - Include technical terminology
+   - Reference specific features
+   - Emphasize quality and accuracy
 
 2. **For Basic Needs**
-   - Use simple language
-   - Focus on speed
-   - Request basic functionality
-
-3. **For Optimal Selection**
-   - Be clear about requirements
-   - Match prompt to MCP strengths
-   - Consider processing needs
+   - Use simple, direct language
+   - Emphasize speed and simplicity
+   - Avoid technical terms
 
 ## Example Prompts
 
