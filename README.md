@@ -188,23 +188,6 @@ From the [README](https://github.com/kimtaeyoon83/mcp-server-youtube-transcript/
 | Input Validation       | Yes                               | Yes                                        |
 | Timeout Handling       | Not explicit                      | Yes                                        |
 
----
 
-**All conclusions above are directly evidenced by the code and documentation from the official GitHub repositories:**
 - [sinco-lab/mcp-youtube-transcript](https://github.com/sinco-lab/mcp-youtube-transcript)
 - [kimtaeyoon83/mcp-server-youtube-transcript](https://github.com/kimtaeyoon83/mcp-server-youtube-transcript)
-
----
-
-## Prompt Storage for Manual Claude Testing
-
-Use a file (e.g., `prompt_examples.json`) to store prompts you want to test with Claude. Each entry should look like:
-
-```json
-{
-  "prompt": "Get the transcript for https://www.youtube.com/watch?v=... in Spanish",
-  "notes": "What do you expect Claude to do? (optional)"
-}
-```
-
-Add as many prompts as you like. This repository is now focused only on code-based MCP analysis and prompt collection for manual testing. 
